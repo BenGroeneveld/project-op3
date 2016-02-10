@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5db2ee0f-9899-45e4-a4a0-a8c5d5950dfd" name="HogeschoolRotterdam" url="http://ftp.hr.nl/USERS16/6/0912716/public.www">
+        <fileTransfer host="ftp.hr.nl" port="21" rootFolder="/USERS16/6/0912716" password="dfe8dfc9dfcedf87dfc4dfd8df87df9b" username="0912716.cmi">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" showHiddenFiles="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
