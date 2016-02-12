@@ -62,7 +62,7 @@
 
 			background-color:		_palette(bg);
 
-			background-image:		linear-gradient(to top, transparentize(_palette(bg), 0.2), transparentize(_palette(bg), 0.2)),
+			background-image:		linear-gradient(to top, transparentize(_palette(bg), _palette(wrppr-opc)), transparentize(_palette(bg), _palette(wrppr-opc))),
 									_image(background-img);
 
 			background-size:		auto,
@@ -91,7 +91,7 @@
 				}
 
 				.contact {
-					width: 100%;
+					width: calc(33.3333333333% - #{_size(section-spacing, medium) * 0.5});
 					margin: 0 0 (_size(element-margin) * 2) 0;
 				}
 

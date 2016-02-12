@@ -6,12 +6,12 @@
 /* Basic */
 body {
   background-color: #303030;
-  background-image: url("/0912716/images/bg1.jpg");
+  background-image: url("http://stud.hr.nl/0912716/images/bg1.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center; }
   body:before {
-    background: rgba(48, 48, 48, 0.8);
+    background: rgba(48, 48, 48, 0.6);
     content: '';
     display: block;
     height: 100%;
@@ -61,5 +61,3 @@ body {
   #footer .inner .contact {
     display: inline-block;
     width: 45%; }
-
-/*# sourceMappingURL=ie9.css.map */

@@ -19,7 +19,7 @@
 		background-position:	center;
 
 		&:before {
-			background: transparentize(_palette(bg), 0.2);
+			background: transparentize(_palette(bg), _palette(wrppr-opc));
 			content: '';
 			display: block;
 			height: 100%;

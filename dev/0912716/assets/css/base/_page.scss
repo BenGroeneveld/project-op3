@@ -26,7 +26,7 @@
 	body {
 		background-color:		_palette(wrppr);
 
-		background-image:		linear-gradient(to top, transparentize(_palette(wrppr), _palette(wrppr_opc)), transparentize(_palette(wrppr), _palette(wrppr_opc))),
+		background-image:		linear-gradient(to top, transparentize(_palette(wrppr), _palette(wrppr-opc)), transparentize(_palette(wrppr), _palette(wrppr-opc))),
 								_image(background-img);
 
 		background-size:		auto,

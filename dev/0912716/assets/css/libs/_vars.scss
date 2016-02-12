@@ -7,7 +7,7 @@
 
 // Image.
 	$image: (
-		background-img:			url('/0912716/images/bg1.jpg')
+		background-img:			url('http://stud.hr.nl/0912716/images/bg1.jpg')
 	);
 
 // Duration.
@@ -50,8 +50,9 @@
 	$palette: (
 		bg:						#303030,
         wrppr:                  #303030,
-        wrppr_opc:              0.4,
-        hdr:                    #303030,
+        wrppr-opc:              0.4,
+        hdr:                    #750000,
+		hdr-opc:				0.0,
 		fg:						#ffffff,
 		fg-bold:				#ffffff,
 		fg-light:				rgba(255,255,255,0.35),
