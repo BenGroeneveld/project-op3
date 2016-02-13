@@ -25,7 +25,8 @@
         }
 
         .contact {
-            width: calc(33.33% - #{_size(section-spacing, large) * 0.5});
+            //width: calc(33.33% - #{_size(section-spacing, large) * 0.5});
+            width: calc(100% / 3);
         }
 
         .copyright {
@@ -58,7 +59,8 @@
         }
     }
 
-    @include breakpoint(large) {
+    @include breakpoint(large)
+    {
 
         background-color:		_palette(bg);
 
@@ -93,9 +95,9 @@
                 margin: 0 0 (_size(element-margin) * 2) 0;
             }
 
-            .copyright {
-                margin: (_size(element-margin) * 2) 0 _size(element-margin) 0;
-            }
+            //.copyright {
+            //    margin: (_size(element-margin) * 2) 0 _size(element-margin) 0;
+            //}
         }
     }
 
@@ -119,7 +121,11 @@
     @include breakpoint(xsmall) {
         .inner {
             display: block;
-            //width: 100%;
+            .contact
+            {
+                width: 100%;
+            }
+
             .copyright {
                 li {
                     border-left: 0;
