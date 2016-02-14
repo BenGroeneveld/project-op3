@@ -47,18 +47,26 @@
 	);
 
 // Palette.
-	$palette: (
-		bg:						#303030,
-        wrppr:                  #303030,
+	$default-color:				#2B2B2B;
+	$accent-color:				#AA0000;
+
+	$palette:
+	(
+		default-color:			$default-color,
+		accent-color:			$accent-color,
+		bg:						$default-color,
+        wrppr:                  $default-color,
         wrppr-opc:              0.4,
-        hdr:                    #750000,
+        hdr:                    $accent-color,
 		hdr-opc:				0.0,
+	    hdr-lghtn:				0.0,
+		hdr-dsat:				0.0,
 		fg:						#ffffff,
 		fg-bold:				#ffffff,
 		fg-light:				rgba(255,255,255,0.35),
 		border:					rgba(255,255,255,0.125),
 		border-bg:				rgba(255,255,255,0.025),
 		border2:				rgba(255,255,255,0.25),
-		border2-bg:				rgba(255,255,255,0.075),
-		accent:					#750000
+		border2-bg:				rgba(255,255,255,0.075)
 	);
+

@@ -8,7 +8,7 @@
 
 	#header {
 		@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
-		background-color: transparentize(desaturate(lighten(_palette(hdr), 3), 1.5), _palette(hdr-opc));
+		background-color: transparentize(desaturate(lighten(_palette(hdr), _palette(hdr-lghtn)), _palette(hdr-dsat)), _palette(hdr-opc));
 		height: 3.5em;
 		left: 0;
 		line-height: 3.5em;

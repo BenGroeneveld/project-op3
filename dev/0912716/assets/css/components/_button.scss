@@ -48,20 +48,20 @@
 		}
 
 		&.special {
-			background-color: _palette(accent);
+			background-color: _palette(accent-color);
 			box-shadow: none;
 
 			&:hover {
-				background-color: desaturate(lighten(_palette(accent), 3), 1.5);
+				background-color: desaturate(lighten(_palette(accent-color), 3), 1.5);
 			}
 
 			&:active {
-				background-color: saturate(darken(_palette(accent), 3), 1.5);
+				background-color: saturate(darken(_palette(accent-color), 3), 1.5);
 			}
 
 			&.icon {
 				&:before {
-					color: mix(_palette(fg-bold), _palette(accent), 25%);
+					color: mix(_palette(fg-bold), _palette(accent-color), 25%);
 				}
 			}
 		}
