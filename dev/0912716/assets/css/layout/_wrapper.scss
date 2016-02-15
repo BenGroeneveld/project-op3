@@ -160,6 +160,12 @@
              @include vendor('display', 'flex');
              @include vendor('align-items', 'center');
              @include vendor('flex-direction', 'row');
+
+
+             #iframe1
+             {
+                 display: none;
+             }
          }
 
          .image {
@@ -393,25 +399,32 @@
         }
     }
 
-    @include breakpoint(xsmall) {
-        &.spotlight {
-            .inner {
+    @include breakpoint(xsmall)
+    {
+        &.spotlight
+        {
+            .inner
+            {
                 display: block;
             }
 
-            .image {
+            .image
+            {
                 margin: 0 0 (_size(element-margin) * 0.5) 0 !important;
                 max-width: 85%;
                 width: 12em;
             }
         }
 
-        &.main {
-            .inner {
+        &.main
+        {
+            .inner
+            {
                 display: block;
             }
 
-            .image {
+            .image
+            {
                 margin: 0 0 (_size(element-margin) * 0.5) 0 !important;
                 max-width: 85%;
                 width: 12em;

@@ -51,12 +51,12 @@
                                 <div class="content">
                                     <h3 class="major"><span class="icon fa-file-text-o"></span> De documenten</h3>
                                     <ul class="docButton">
-                                        <li><button value="docs/modulewijzer.pdf" class="button iframeButton">Modulewijzer</button></li>
+                                        <li><button value="" class="button special iframeButton" id="verberg">Verberg viewer</button></li>
                                         <li><button value="docs/samenwerkingscontract.pdf" class="button iframeButton">Samenwerkingscontract</button></li>
                                         <li><button value="docs/productBacklog.pdf" class="button iframeButton">Product Backlog</button></li>
                                         <li><button value="docs/sprintWeek1.pdf" class="button iframeButton">Sprintplanning Week 1</button></li>
                                     </ul>
-                                    <iframe id= "iframe1" src="docs/modulewijzer.pdf" frameborder="0" height="65%" width="100%"></iframe>
+                                    <iframe id= "iframe1" frameborder="0" height="85%" width="100%"></iframe>
                                 </div>
                             </div>
                         </section>
@@ -113,6 +113,22 @@
                             }
                         }
                     };
+                </script>
+                <script type="text/javascript">
+                    $(function()
+                    {
+                        $('#iframe1').load(function()
+                        {
+                            if($.trim($(this).contents().find("body").html()) == "")
+                            {
+                                $(this).hide();
+                            }
+                            else
+                            {
+                                $(this).show();
+                            }
+                        });
+                    });
                 </script>
             </div>
         </div>

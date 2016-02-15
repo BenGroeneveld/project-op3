@@ -1921,6 +1921,18 @@ button,
     padding: 0 1.0em;
     margin-top: 0.75em;
     width: calc((100% - 0.5em) / 3); }
+    input[type="submit"].iframeButton#verberg,
+    input[type="reset"].iframeButton#verberg,
+    input[type="button"].iframeButton#verberg,
+    button.iframeButton#verberg,
+    .button.iframeButton#verberg {
+      width: 100%; }
+    input[type="submit"].iframeButton.special#verberg,
+    input[type="reset"].iframeButton.special#verberg,
+    input[type="button"].iframeButton.special#verberg,
+    button.iframeButton.special#verberg,
+    .button.iframeButton.special#verberg {
+      width: 100%; }
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   input[type="button"]:hover,
@@ -2540,6 +2552,8 @@ body.is-menu-visible #menu {
       -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row; }
+      .wrapper.main .inner #iframe1 {
+        display: none; }
     .wrapper.main .image {
       border-radius: 100%;
       margin: 0 3em 1.25em 0;

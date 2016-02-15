@@ -33,10 +33,23 @@
 		white-space: nowrap;
 
 		&.iframeButton
-		{
-            padding: 0 1.0em;
+        {
+            padding:    0 1.0em;
             margin-top: 0.75em;
-			width: calc((100% - 0.5em) / 3);
+            width:      calc((100% - 0.5em) / 3);
+
+            &#verberg
+            {
+                width: 100%;
+            }
+
+            &.special
+            {
+                &#verberg
+                {
+                    width: 100%;
+                }
+            }
 		}
 
 		&:hover {
