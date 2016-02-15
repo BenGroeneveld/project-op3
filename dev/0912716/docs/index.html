@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+    <head>
+        <base href="http://stud.hr.nl/0912716/" target="_self">
+        <title>De documenten</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+        <link rel="shortcut icon" href="assets/favicon.ico" />
+    </head>
+<body>
+        <div id="container1">
+            <div id="container2">
+
+                <!-- Page Wrapper -->
+                <div id="page-wrapper">
+
+                    <!-- Header -->
+                    <header id="header">
+                        <h1><a href="">Project OP3: De Pinautomaat</a></h1>
+                        <nav>
+                            <a href="#menu">Menu</a>
+                        </nav>
+                    </header>
+
+                    <!-- Menu -->
+                    <nav id="menu">
+                        <div class="inner">
+                            <h2>Menu</h2>
+                            <ul class="links">
+                                <li><a href=""><span class="icon fa-home"></span> Home</a></li>
+                                <li><a href="code"><span class="icon fa-code"></span> De code</a></li>
+                                <li><a href="#"><span class="icon fa-file-text-o"></span> De documenten</a></li>
+                            </ul>
+                            <a href="#" class="close">Close</a>
+                        </div>
+                    </nav>
+
+                    <!-- Wrapper -->
+                    <section id="wrapper">
+                        <header>
+                            <div class="inner">
+                                <h2><span class="icon fa-file-text-o"></span> De documenten</h2>
+                                <p>De documentatie voor dit project</p>
+                            </div>
+                        </header>
+
+                        <!-- Content -->
+                        <section class="wrapper main">
+                            <div class="inner">
+                                <div class="content">
+                                    <h3 class="major"><span class="icon fa-file-text-o"></span> De documenten</h3>
+                                    <ul class="docButton">
+                                        <li><button value="docs/modulewijzer.pdf" class="button iframeButton">Modulewijzer</button></li>
+                                        <li><button value="docs/samenwerkingscontract.pdf" class="button iframeButton">Samenwerkingscontract</button></li>
+                                        <li><button value="docs/productBacklog.pdf" class="button iframeButton">Product Backlog</button></li>
+                                        <li><button value="docs/sprintWeek1.pdf" class="button iframeButton">Sprintplanning Week 1</button></li>
+                                    </ul>
+                                    <iframe id= "iframe1" src="docs/modulewijzer.pdf" frameborder="0" height="65%" width="100%"></iframe>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+
+                    <!-- Footer -->
+                    <section id="footer">
+                        <div class="inner">
+                            <h2 class="major">Contactgegevens</h2>
+                            <ul class="contact">
+                                <li class="fa-user"><p>Ben Groeneveld</p></li>
+                                <li class="fa-tag"><p>091276</p></li>
+                                <li class="fa-envelope"><a href="mailto:0912716@hr.nl">0912716@hr.nl</a></li>
+                                <li class="fa-globe"><a href="http://stud.hr.nl/0912716">stud.hr.nl/0912716</a></li>
+                                <li class="fa-phone"><p>+31 6 25460112</p></li>
+                            </ul>
+                            <ul class="contact">
+                                <li class="fa-user"><p>Remco La Brijn</p></li>
+                                <li class="fa-tag"><p>0894807</p></li>
+                                <li class="fa-envelope"><a href="mailto:0894807@hr.nl">0894807@hr.nl</a></li>
+                                <li class="fa-globe"><a href="http://stud.hr.nl/0894807">stud.hr.nl/0894807</a></li>
+                                <li class="fa-phone"><p>+31 6 40411077</p></li>
+                            </ul>
+                            <ul class="contact">
+                                <li class="fa-user"><p>Osman Altun</p></li>
+                                <li class="fa-tag"><p>0914026</p></li>
+                                <li class="fa-envelope"><a href="mailto:0914026@hr.nl">0914026@hr.nl</a></li>
+                                <li class="fa-globe"><a href="http://stud.hr.nl/0914026">stud.hr.nl/0914026</a></li>
+                                <li class="fa-phone"><p>+31 6 34749176</p></li>
+                            </ul>
+                            <ul class="copyright">
+                                <li>Template design: <a href="http://html5up.net">HTML5 UP</a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- Scripts -->
+                <script src="assets/js/skel.min.js"></script>
+                <script src="assets/js/jquery.min.js"></script>
+                <script src="assets/js/jquery.scrollex.min.js"></script>
+                <script src="assets/js/util.js"></script>
+                <script src="assets/js/main.js"></script>
+                <script type="text/javascript">
+                    window.onload = function()
+                    {
+                        var elements = document.getElementsByClassName('iframeButton');
+                        for (var i = 0; i < elements.length; i++)
+                        {
+                            elements[i].onclick = function()
+                            {
+                                document.getElementById("iframe1").src = this.value;
+                            }
+                        }
+                    };
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

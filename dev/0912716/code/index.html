@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="nl-NL">
 <head>
     <base href="http://stud.hr.nl/0912716/" target="_self">
     <title>Code</title>
@@ -12,60 +12,63 @@
     <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
+    <div id="container1">
+        <div id="container2">
 
-    <!-- Page Wrapper -->
-    <div id="page-wrapper">
+            <!-- Page Wrapper -->
+            <div id="page-wrapper">
 
-        <!-- Header -->
-        <header id="header">
-            <h1><a href="">Project OP3: De Pinautomaat</a></h1>
-            <nav>
-                <a href="#menu">Menu</a>
-            </nav>
-        </header>
+                <!-- Header -->
+                <header id="header">
+                    <h1><a href="">Project OP3: De Pinautomaat</a></h1>
+                    <nav>
+                        <a href="#menu">Menu</a>
+                    </nav>
+                </header>
 
-        <!-- Menu -->
-        <nav id="menu">
-            <div class="inner">
-                <h2>Menu</h2>
-                <ul class="links">
-                    <li><a href=""><span class="icon fa-home"></span> Home</a></li>
-                    <li><a href="code"><span class="icon fa-code"></span> Code</a></li>
-                </ul>
-                <a href="#" class="close">Close</a>
-            </div>
-        </nav>
+                <!-- Menu -->
+                <nav id="menu">
+                    <div class="inner">
+                        <h2>Menu</h2>
+                        <ul class="links">
+                            <li><a href=""><span class="icon fa-home"></span> Home</a></li>
+                            <li><a href="code/"><span class="icon fa-code"></span> De code</a></li>
+                            <li><a href="docs/"><span class="icon fa-file-text-o"></span> De documenten</a></li>
+                        </ul>
+                        <a href="#" class="close">Close</a>
+                    </div>
+                </nav>
 
-        <!-- Wrapper -->
-        <section id="wrapper">
-            <header>
-                <div class="inner">
-                    <h2><span class="icon fa-code"></span> De code</h2>
-                    <p>De broncode van de pinautomaat</p>
-                </div>
-            </header>
+                <!-- Wrapper -->
+                <section id="wrapper">
+                    <header>
+                        <div class="inner">
+                            <h2><span class="icon fa-code"></span> De code</h2>
+                            <p>De broncode van de pinautomaat</p>
+                        </div>
+                    </header>
 
-            <!-- Content -->
-            <section class="wrapper main">
-                <div class="inner">
-                    <div class="content">
-                        <h3 class="major"><span class="icon fa-code"></span> De broncode</h3>
-                        <pre><code lang="arduino">#include &lt;Keypad.h&gt;
+                    <!-- Content -->
+                    <section class="wrapper main">
+                        <div class="inner">
+                            <div class="content">
+                                <h3 class="major"><span class="icon fa-code"></span> De broncode</h3>
+                                <pre><code lang="arduino">#include &lt;Keypad.h&gt;
 
 const byte ROWS = 4;
 const byte COLS = 4;
 char keys[ROWS][COLS] =
 {
-    {'1','4','7','*'},
-    {'2','5','8','0'},
-    {'3','6','9','#'},
-    {'A','B','C','D'}
+    {'1','2','3','A'},
+    {'4','5','6','B'},
+    {'7','8','9','C'},
+    {'*','0','#','D'}
 };
 
-byte rowPins[ROWS] = {5, 4, 3, 2};
-byte colPins[COLS] = {9, 8, 7, 6};
+byte rowPins[ROWS] = { 2, 3, 4, 5 };
+byte colPins[COLS] = { 6, 7, 8, 9 };
 
-Keypad kpd = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS);
+Keypad kpad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
 void setup()
 {
@@ -74,66 +77,68 @@ void setup()
 
 void loop()
 {
-    char key = kpd.getKey();
+    char key = kpad.getKey();
 
     if (key)
     {
         Serial.println(key);
     }
-}</code></pre>
-                    </div>
-                </div>
-            </section>
+}
+</code></pre>
+                            </div>
+                        </div>
+                    </section>
 
-            <section class="wrapper alt spotlight style3">
-                <div class="inner">
-                    <div class="content">
-                        <h2 class="major">Nullam dignissim</h2>
-                        <p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-                    </div>
-                </div>
-            </section>
-        </section>
+                    <section class="wrapper alt spotlight style3">
+                        <div class="inner">
+                            <div class="content">
+                                <h2 class="major">Nullam dignissim</h2>
+                                <p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
 
-        <!-- Footer -->
-        <section id="footer">
-            <div class="inner">
-                <h2 class="major">Contactgegevens</h2>
-                <ul class="contact">
-                    <li class="fa-user"><p>Ben Groeneveld</p></li>
-                    <li class="fa-tag"><p>091276</p></li>
-                    <li class="fa-envelope"><a href="mailto:0912716@hr.nl">0912716@hr.nl</a></li>
-                    <li class="fa-globe"><a href="http://stud.hr.nl/0912716">stud.hr.nl/0912716</a></li>
-                    <li class="fa-phone"><p>+31 6 25460112</p></li>
-                </ul>
-                <ul class="contact">
-                    <li class="fa-user"><p>Remco La Brijn</p></li>
-                    <li class="fa-tag"><p>0894807</p></li>
-                    <li class="fa-envelope"><a href="mailto:0894807@hr.nl">0894807@hr.nl</a></li>
-                    <li class="fa-globe"><a href="http://stud.hr.nl/0894807">stud.hr.nl/0894807</a></li>
-                    <li class="fa-phone"><p>+31 6 40411077</p></li>
-                </ul>
-                <ul class="contact">
-                    <li class="fa-user"><p>Osman Altun</p></li>
-                    <li class="fa-tag"><p>0914026</p></li>
-                    <li class="fa-envelope"><a href="mailto:0914026@hr.nl">0914026@hr.nl</a></li>
-                    <li class="fa-globe"><a href="http://stud.hr.nl/0914026">stud.hr.nl/0914026</a></li>
-                    <li class="fa-phone"><p>+31 6 34749176</p></li>
-                </ul>
-                <ul class="copyright">
-                    <li>Template design: <a href="http://html5up.net">HTML5 UP</a></li>
-                </ul>
+                <!-- Footer -->
+                <section id="footer">
+                    <div class="inner">
+                        <h2 class="major">Contactgegevens</h2>
+                        <ul class="contact">
+                            <li class="fa-user"><p>Ben Groeneveld</p></li>
+                            <li class="fa-tag"><p>091276</p></li>
+                            <li class="fa-envelope"><a href="mailto:0912716@hr.nl">0912716@hr.nl</a></li>
+                            <li class="fa-globe"><a href="http://stud.hr.nl/0912716">stud.hr.nl/0912716</a></li>
+                            <li class="fa-phone"><p>+31 6 25460112</p></li>
+                        </ul>
+                        <ul class="contact">
+                            <li class="fa-user"><p>Remco La Brijn</p></li>
+                            <li class="fa-tag"><p>0894807</p></li>
+                            <li class="fa-envelope"><a href="mailto:0894807@hr.nl">0894807@hr.nl</a></li>
+                            <li class="fa-globe"><a href="http://stud.hr.nl/0894807">stud.hr.nl/0894807</a></li>
+                            <li class="fa-phone"><p>+31 6 40411077</p></li>
+                        </ul>
+                        <ul class="contact">
+                            <li class="fa-user"><p>Osman Altun</p></li>
+                            <li class="fa-tag"><p>0914026</p></li>
+                            <li class="fa-envelope"><a href="mailto:0914026@hr.nl">0914026@hr.nl</a></li>
+                            <li class="fa-globe"><a href="http://stud.hr.nl/0914026">stud.hr.nl/0914026</a></li>
+                            <li class="fa-phone"><p>+31 6 34749176</p></li>
+                        </ul>
+                        <ul class="copyright">
+                            <li>Template design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        </ul>
+                    </div>
+                </section>
+
             </div>
-        </section>
 
+            <!-- Scripts -->
+            <script src="assets/js/skel.min.js"></script>
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+        </div>
     </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/skel.min.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
 </body>
 </html>

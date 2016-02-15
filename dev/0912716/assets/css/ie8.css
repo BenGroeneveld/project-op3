@@ -1,74 +1,111 @@
 /*
-Error: Invalid CSS after "...ault-color:				": expected expression (e.g. 1px, bold), was "#2B2B2;"
-        on line 50 of libs/_vars.scss
-        from line 1 of ie8.scss
-
-45: 		weight-heading-bold:	700,
-46: 		kern-heading:			0.1em
-47: 	);
-48: 
-49: // Palette.
-50: 	$default-color:				#2B2B2;
-51: 	$accent-color:				#AA0000;
-52: 
-53: 	$palette:
-54: 	(
-55: 		default-color:			$default-color,
-
-Backtrace:
-libs/_vars.scss:50
-ie8.scss:1
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1179:in `expected'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/lexer.rb:227:in `expected!'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/parser.rb:673:in `assert_expr'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/parser.rb:63:in `parse'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1041:in `sass_script'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:619:in `variable'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:673:in `block_child'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:666:in `block_contents'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:123:in `stylesheet'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:39:in `parse'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:403:in `_to_tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:309:in `to_tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:324:in `block in visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:278:in `render'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin.rb:82:in `update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:363:in `watch_or_update'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:51:in `process_result'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/base.rb:52:in `parse'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/base.rb:19:in `parse!'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/bin/scss:13:in `<top (required)>'
-C:/Ruby22-x64/bin/scss:23:in `load'
-C:/Ruby22-x64/bin/scss:23:in `<main>'
+	Solid State by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...ault-color:				\": expected expression (e.g. 1px, bold), was \"#2B2B2;\"\A         on line 50 of libs/_vars.scss\A         from line 1 of ie8.scss\A \A 45: 		weight-heading-bold:	700,\A 46: 		kern-heading:			0.1em\A 47: 	);\A 48: \A 49: // Palette.\A 50: 	$default-color:				#2B2B2;\A 51: 	$accent-color:				#AA0000;\A 52: \A 53: 	$palette:\A 54: 	(\A 55: 		default-color:			$default-color,"; }
+/* Basic */
+body {
+  -ms-behavior: url("assets/js/backgroundsize.min.htc"); }
+
+/* Type */
+h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+  border-bottom: solid 2px #ffffff; }
+
+blockquote {
+  border-left: solid 4px #ffffff; }
+
+code {
+  border: solid 2px #ffffff; }
+
+hr {
+  border-bottom: solid 2px #ffffff; }
+
+/* Button */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+  position: relative;
+  -ms-behavior: url("assets/js/ie/PIE.htc");
+  border: solid 2px #ffffff; }
+  input[type="submit"].special,
+  input[type="reset"].special,
+  input[type="button"].special,
+  button.special,
+  .button.special {
+    border: 0; }
+
+/* Form */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  position: relative;
+  -ms-behavior: url("assets/js/ie/PIE.htc");
+  background: transparent;
+  border: solid 2px #ffffff; }
+
+/* Table */
+table tbody tr {
+  border: solid 1px #ffffff;
+  border-left: 0;
+  border-right: 0; }
+table.alt tbody tr td {
+  border: solid 1px #ffffff;
+  border-left-width: 0;
+  border-top-width: 0; }
+  table.alt tbody tr td:first-child {
+    border-left-width: 1px; }
+table.alt tbody tr:first-child td {
+  border-top-width: 1px; }
+table.alt thead {
+  border-bottom: 0; }
+table.alt tfoot {
+  border-top: 0; }
+
+/* Features */
+.features article {
+  -ms-behavior: url("assets/js/ie/PIE.htc");
+  position: relative;
+  width: 44%; }
+  .features article .image {
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%; }
+
+/* Menu */
+#menu {
+  background: #2B2B2B; }
+  #menu h2 {
+    border-bottom: solid 2px #ffffff; }
+
+/* Header */
+#header {
+  background-color: #333333; }
+
+/* Wrapper */
+.wrapper {
+  margin: 0; }
+  .wrapper:before, .wrapper:after {
+    display: none; }
+  .wrapper.spotlight .image {
+    -ms-behavior: url("assets/js/ie/PIE.htc"); }
+    .wrapper.spotlight .image img {
+      position: relative;
+      -ms-behavior: url("assets/js/ie/PIE.htc"); }
+
+/* Banner */
+#banner .logo .icon {
+  border: solid 2px #ffffff;
+  -ms-behavior: url("assets/js/ie/PIE.htc"); }
+#banner h2 {
+  border-bottom: solid 2px #ffffff; }
+
+/* Footer */
+#footer .inner .copyright {
+  border-top: solid 2px #ffffff; }
+  #footer .inner .copyright li {
+    border-left: solid 2px #ffffff; }

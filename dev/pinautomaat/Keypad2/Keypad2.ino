@@ -4,16 +4,16 @@ const byte ROWS = 4;
 const byte COLS = 4;
 char keys[ROWS][COLS] =
 {
-    {'1','4','7','*'},
-    {'2','5','8','0'},
-    {'3','6','9','#'},
-    {'A','B','C','D'}
+    {'1','2','3','A'},
+    {'4','5','6','B'},
+    {'7','8','9','C'},
+    {'*','0','#','D'}
 };
 
-byte rowPins[ROWS] = {5, 4, 3, 2};
-byte colPins[COLS] = {9, 8, 7, 6};
+byte rowPins[ROWS] = { 2, 3, 4, 5 };
+byte colPins[COLS] = { 6, 7, 8, 9 };
 
-Keypad kpd = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS);
+Keypad kpad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
 void setup()
 {
@@ -22,7 +22,7 @@ void setup()
 
 void loop()
 {
-    char key = kpd.getKey();
+    char key = kpad.getKey();
 
     if (key)
     {
