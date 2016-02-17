@@ -1913,26 +1913,22 @@ button,
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap; }
-  input[type="submit"].iframeButton,
-  input[type="reset"].iframeButton,
-  input[type="button"].iframeButton,
-  button.iframeButton,
-  .button.iframeButton {
+  input[type="submit"].switchContent,
+  input[type="reset"].switchContent,
+  input[type="button"].switchContent,
+  button.switchContent,
+  .button.switchContent {
     padding: 0 1.0em;
     margin-top: 0.75em;
     width: calc((100% - 0.5em) / 3); }
-    input[type="submit"].iframeButton#verberg,
-    input[type="reset"].iframeButton#verberg,
-    input[type="button"].iframeButton#verberg,
-    button.iframeButton#verberg,
-    .button.iframeButton#verberg {
-      width: 100%; }
-    input[type="submit"].iframeButton.special#verberg,
-    input[type="reset"].iframeButton.special#verberg,
-    input[type="button"].iframeButton.special#verberg,
-    button.iframeButton.special#verberg,
-    .button.iframeButton.special#verberg {
-      width: 100%; }
+  input[type="submit"].verberg,
+  input[type="reset"].verberg,
+  input[type="button"].verberg,
+  button.verberg,
+  .button.verberg {
+    padding: 0 1.0em;
+    margin-top: 0.75em;
+    width: 100%; }
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   input[type="button"]:hover,
@@ -1959,6 +1955,14 @@ button,
   .button.special {
     background-color: #008500;
     box-shadow: none; }
+    input[type="submit"].special.verberg,
+    input[type="reset"].special.verberg,
+    input[type="button"].special.verberg,
+    button.special.verberg,
+    .button.special.verberg {
+      padding: 0 1.0em;
+      margin-top: 0.75em;
+      width: 100%; }
     input[type="submit"].special:hover,
     input[type="reset"].special:hover,
     input[type="button"].special:hover,
@@ -2008,11 +2012,11 @@ button,
   .button:disabled {
     opacity: 0.25; }
   @media screen and (max-width: 836px) {
-    input[type="submit"].iframeButton,
-    input[type="reset"].iframeButton,
-    input[type="button"].iframeButton,
-    button.iframeButton,
-    .button.iframeButton {
+    input[type="submit"].switchContent,
+    input[type="reset"].switchContent,
+    input[type="button"].switchContent,
+    button.switchContent,
+    .button.switchContent {
       padding: 0 1.0em;
       margin-top: 0.75em;
       width: 100%; } }
@@ -2483,6 +2487,8 @@ body.is-menu-visible #menu {
   position: relative; }
   .wrapper:before, .wrapper:after {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%232B2B2B;' /%3E%3C/svg%3E"); }
+  .wrapper #preBlock, .wrapper #codeBlock {
+    display: none; }
   .wrapper:before, .wrapper:after {
     background-repeat: no-repeat;
     background-size: 100% 100%;

@@ -104,6 +104,11 @@
     position: relative;
     @include wrapper-edges-color(_palette(default-color));
 
+    #preBlock, #codeBlock
+    {
+        display: none;
+    }
+
     &:before, &:after {
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -156,11 +161,11 @@
          @include wrapper-edges-color(_palette(default-color));
          background-color: _palette(default-color);
 
-         .inner {
+         .inner
+         {
              @include vendor('display', 'flex');
              @include vendor('align-items', 'center');
              @include vendor('flex-direction', 'row');
-
 
              #iframe1
              {

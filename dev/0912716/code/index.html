@@ -1,16 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="nl-NL">
-<head>
-    <base href="http://stud.hr.nl/0912716/" target="_self">
-    <title>Code</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
-    <link rel="shortcut icon" href="assets/favicon.ico" />
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/darkula.min.css">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-</head>
+    <head>
+        <base href="http://stud.hr.nl/0912716/" target="_self">
+        <title>Code</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+        <link rel="shortcut icon" href="assets/favicon.ico" />
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/darkula.min.css">
+    </head>
 <body>
     <div id="container1">
         <div id="container2">
@@ -53,42 +51,18 @@
                         <div class="inner">
                             <div class="content">
                                 <h3 class="major"><span class="icon fa-code"></span> De broncode</h3>
-                                <pre><code lang="arduino">#include &lt;Keypad.h&gt;
-
-const byte ROWS = 4;
-const byte COLS = 4;
-char keys[ROWS][COLS] =
-{
-    {'1','2','3','A'},
-    {'4','5','6','B'},
-    {'7','8','9','C'},
-    {'*','0','#','D'}
-};
-
-byte rowPins[ROWS] = { 2, 3, 4, 5 };
-byte colPins[COLS] = { 6, 7, 8, 9 };
-
-Keypad kpad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
-
-void setup()
-{
-    Serial.begin(9600);
-}
-
-void loop()
-{
-    char key = kpad.getKey();
-
-    if (key)
-    {
-        Serial.println(key);
-    }
-}
-</code></pre>
+                                <ul class="docButton">
+                                    <li><button value="" class="button special switchContent verberg">Verberg code</button></li>
+                                </ul>
+                                <ul class="docButton">
+                                    <li><button value="code/Keypad1.ino" class="button switchContent">Keypad1.ino</button></li>
+                                    <li><button value="code/Keypad2.ino" class="button switchContent">Keypad2.ino</button></li>
+                                </ul>
+                                <pre id="preBlock"><code lang="arduino" id="codeBlock"><xmp id="xmpBlock"></xmp></code></pre>
                             </div>
                         </div>
                     </section>
-
+                </section>
                 <!-- Footer -->
                 <section id="footer">
                     <div class="inner">
@@ -119,7 +93,6 @@ void loop()
                         </ul>
                     </div>
                 </section>
-
             </div>
 
             <!-- Scripts -->
@@ -128,6 +101,48 @@ void loop()
             <script src="assets/js/jquery.scrollex.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+
+            <script type="text/javascript">
+                var elements = document.getElementsByClassName('switchContent');
+                for (var i = 0; i < elements.length; i++)
+                {
+                    elements[i].onclick = function()
+                    {
+                        var doc = this.value;
+                        var client = new XMLHttpRequest();
+                        client.open("GET", doc);
+                        client.onreadystatechange = function()
+                        {
+                            var preBlock = document.getElementById('preBlock');
+                            var codeBlock = document.getElementById('codeBlock');
+                            var xmpBlock = document.getElementById('xmpBlock');
+                            xmpBlock.innerHTML = client.responseText;
+                            preBlock.style.display = "block";
+                            codeBlock.style.display = "block";
+                        }
+                        client.send();
+                    }
+                }
+            </script>
+
+            <script type="text/javascript">
+            window.onload = function()
+            {
+                var elements = document.getElementsByClassName('switchContent verberg');
+                for(var i = 0; i < elements.length; i++)
+                {
+                    elements[i].onclick = function()
+                    {
+                        var preBlock = document.getElementById('preBlock');
+                        var codeBlock = document.getElementById('codeBlock');
+                        preBlock.style.display = "none";
+                        codeBlock.style.display = "none";
+                    }
+                }
+            }
+            </script>
         </div>
     </div>
 </body>
