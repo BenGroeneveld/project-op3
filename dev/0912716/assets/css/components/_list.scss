@@ -11,44 +11,35 @@
 		margin: 0 0 _size(element-margin) 0;
 		padding-left: 1.25em;
 
-		li {
+		li
+		{
 			padding-left: 0.25em;
 		}
 	}
 
-	ul {
+	ul
+    {
 		list-style: disc;
 		margin: 0 0 _size(element-margin) 0;
 		padding-left: 1em;
 
-		&.alt {
+		&.alt
+        {
 			list-style: none;
 			padding-left: 0;
 
-			li {
+			li
+            {
 				border-top: solid 1px _palette(border);
 				padding: 0.5em 0;
 
-				&:first-child {
+				&:first-child
+                {
 					border-top: 0;
 					padding-top: 0;
 				}
 			}
 		}
-
-        &.docButton
-        {
-            list-style: none;
-            padding: 0;
-            margin-left: 0;
-            margin-right: 0;
-            width: 100%;
-
-            li
-            {
-                display: inline;
-            }
-        }
 
 		&.icons {
 			cursor: default;
@@ -209,24 +200,11 @@
                 {
                     margin: (_size(element-margin) * 0.75) 0 0 0;
                 }
-                &.docButton
-                {
-                    list-style:   none;
-                    padding:      0;
-                    margin-left:  0;
-                    margin-right: 0;
-                    width:        100%;
-
-                    li
-                    {
-                        display: block;
-                    }
-                }
 			}
 		}
 	}
 
-	dl {
+    dl {
 		margin: 0 0 _size(element-margin) 0;
 
 		dt {

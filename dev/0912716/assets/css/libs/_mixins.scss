@@ -50,3 +50,18 @@
     @return url("data:image/svg+xml;charset=utf8,#{$svg}");
 
 }
+
+@mixin quantity-query($number)
+{
+
+    $x: '#{$number}n';
+
+    &:nth-last-child(#{$x}):first-child
+    {
+        &,
+        & ~ button
+        {
+            width: (100% / $number);
+        }
+    }
+}

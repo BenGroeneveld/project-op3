@@ -5,9 +5,9 @@
 	);
 
 
-// Image.
+//// Image.
 	$image: (
-		background-img:			url('http://stud.hr.nl/0912716/images/bg1.jpg')
+		background-img:			url("http://stud.hr.nl/0912716/images/bg3.jpg")
 	);
 
 // Duration.
@@ -48,15 +48,16 @@
 
 // Palette.
 	$default-color:				#2B2B2B;
-	$accent-color:				#008500;
+	$default-color-bg:			#333340;
+	$accent-color:				#850000;
 
 	$palette:
 	(
 		default-color:			$default-color,
 		accent-color:			$accent-color,
 		bg:						$default-color,
-        wrppr:                  $default-color,
-        wrppr-opc:              0.4,
+        wrppr:                  $default-color-bg,
+        wrppr-opc:              0.075,
         hdr:                    $accent-color,
 		hdr-opc:				0.0,
 	    hdr-lghtn:				0.0,

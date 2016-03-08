@@ -32,45 +32,51 @@
 		text-transform: uppercase;
 		white-space: nowrap;
 
-		&.switchContent
+        &.switchContent
         {
             padding:    0 1.0em;
             margin-top: 0.75em;
-            width:      calc((100% - 0.5em) / 3);
-		}
 
-		&.verberg
-		{
-            padding:    0 1.0em;
-            margin-top: 0.75em;
-			width: 100%;
-		}
+            &.verberg
+            {
+                width: 100%;
+            }
+        }
 
-		&:hover {
+		&:hover
+        {
 			background-color: _palette(border-bg);
 		}
 
-		&:active {
+		&:active
+        {
 			background-color: _palette(border2-bg);
 		}
 
-		&.icon {
-			&:before {
+		&.icon
+        {
+			&:before
+            {
 				margin-right: 0.5em;
 				color: _palette(fg-light);
 			}
 		}
 
-		&.special {
+		&.special
+        {
 			background-color: _palette(accent-color);
 			box-shadow: none;
 
-            &.verberg
-            {
-                padding:    0 1.0em;
-                margin-top: 0.75em;
-                width: 100%;
-            }
+			&.switchContent
+			{
+				padding:    0 1.0em;
+				margin-top: 0.75em;
+
+				&.verberg
+				{
+					width: 100%;
+				}
+			}
 
 			&:hover {
 				background-color: desaturate(lighten(_palette(accent-color), 3), 1.5);
