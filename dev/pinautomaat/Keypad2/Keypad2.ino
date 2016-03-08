@@ -11,7 +11,7 @@ char keys[ROWS][COLS] =
 };
 
 byte rowPins[ROWS] = { 2, 3, 4, 5 };
-byte colPins[COLS] = { 6, 7, 8, 9 };
+byte colPins[COLS] = { A1, A2, A3, A4 };
 
 Keypad kpad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
