@@ -7,7 +7,10 @@
 /* Banner */
 
 	#banner {
-		@include padding(10em, 0, (0, 0, _size(wrapper-edges, large) * -0.5, 0));
+		padding-top: 5em;
+		padding-bottom: 1em;
+		padding-left: 0;
+		padding-right: 0;
 
 		.inner {
 			margin: 0 auto;
@@ -48,8 +51,8 @@
 			opacity: 1;
 			border-bottom: solid 2px _palette(border);
 			font-size: 2.25em;
-			margin-bottom: _size(element-margin) * 0.4;
-			padding-bottom: _size(element-margin) * 0.2;
+			//margin-bottom: _size(element-margin) * 0.4;
+			//padding-bottom: _size(element-margin) * 0.2;
 		}
 
 		p {
@@ -67,16 +70,16 @@
 			font-weight: _font(weight-heading);
 			letter-spacing: _font(kern-heading);
 			line-height: 2;
-			text-transform: uppercase;
+			//text-transform: uppercase;
 		}
 
 		@include breakpoint(large) {
-			@include padding(7em, 0, (0, 0, _size(wrapper-edges, large) * 0.5, 0));
+			@include padding(7em, 0, (0, 0, 0, 0));
 
 			background-color:		_palette(bg);
 
-			background-image:		linear-gradient(to top, transparentize(_palette(bg), _palette(wrppr-opc)), transparentize(_palette(bg), _palette(wrppr-opc))),
-									_image(background-img);
+			//background-image:		linear-gradient(to top, transparentize(_palette(bg), _palette(wrppr-opc)), transparentize(_palette(bg), _palette(wrppr-opc))),
+			//						_image(background-img);
 
 			background-size:		auto,
 									cover;
@@ -84,13 +87,15 @@
 			background-position:	center,
 									center;
 
-		 	margin-bottom: (_size(wrapper-edges, large) * -1);
+		 	//margin-bottom: (_size(wrapper-edges, large) * -1);
+			margin-bottom: 0;
 		}
 
 		@include breakpoint(medium) {
-			@include padding(12em, 3em, (0, 0, _size(wrapper-edges, medium) * 0.5, 0));
+			@include padding(12em, 3em, (0, 0, 0, 0));
 
-		 	margin-bottom: (_size(wrapper-edges, medium) * -1);
+		 	//margin-bottom: (_size(wrapper-edges, medium) * -1);
+			margin-bottom: 0;
 
 			.inner {
 				width: 100%;
@@ -98,9 +103,10 @@
 		}
 
 		@include breakpoint(small) {
-			@include padding(5em, 2em, (0, 0, _size(wrapper-edges, small) * 0.5, 0));
+			@include padding(5em, 2em, (0, 0, 0, 0));
 
-		 	margin-bottom: (_size(wrapper-edges, small) * -1);
+		 	//margin-bottom: (_size(wrapper-edges, small) * -1);
+			margin-bottom: 0;
 
 			.logo {
 				margin: 0 0 (_size(element-margin) * 0.5) 0;

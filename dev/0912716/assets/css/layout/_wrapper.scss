@@ -37,7 +37,7 @@
             font-weight: _font(weight-heading);
             letter-spacing: _font(kern-heading);
             line-height: 2;
-            text-transform: uppercase;
+            //text-transform: uppercase;
         }
     }
 
@@ -47,8 +47,8 @@
 
             background-color:		_palette(bg);
 
-            background-image:		linear-gradient(to top, transparentize(_palette(bg), _palette(wrppr-opc)), transparentize(_palette(bg), _palette(wrppr-opc))),
-                                     _image(background-img);
+            //background-image:		linear-gradient(to top, transparentize(_palette(bg), _palette(wrppr-opc)), transparentize(_palette(bg), _palette(wrppr-opc))),
+            //                         _image(background-img);
 
             background-size:		auto,
                                      cover;
@@ -104,7 +104,7 @@
     position: relative;
     @include wrapper-edges-color(_palette(default-color));
 
-    #preBlock, #codeBlock
+    #preBlock, #codeBlock, #xmpBlock
     {
         display: none;
     }
@@ -167,9 +167,76 @@
              @include vendor('align-items', 'center');
              @include vendor('flex-direction', 'row');
 
-             #iframe1
+             .content
              {
-                 display: none;
+                 .docButton
+                 {
+                     overflow: hidden;
+                     margin-bottom: 0.85em;
+                     .veranderContainer
+                     {
+                         width: 100%;
+                         float: left;
+                         button
+                         {
+                             @include quantity-query(4);
+                         }
+                     }
+
+                     .verbergContainer > button
+                     {
+                         width: 100%;
+                     }
+
+                     @include breakpoint(large)
+                     {
+                         .veranderContainer
+                         {
+                             button
+                             {
+                                 @include quantity-query(3);
+                             }
+                         }
+                     }
+
+                     @include breakpoint(medium)
+                     {
+                         .veranderContainer
+                         {
+                             button
+                             {
+                                 @include quantity-query(2);
+                             }
+                         }
+                     }
+
+                     @include breakpoint(small)
+                     {
+                         .veranderContainer
+                         {
+                             button
+                             {
+                                 @include quantity-query(1);
+                             }
+                         }
+                     }
+
+                     @include breakpoint(xsmall)
+                     {
+                         .veranderContainer
+                         {
+                             button
+                             {
+                                 @include quantity-query(1);
+                             }
+                         }
+                     }
+                 }
+
+                 #iframe1
+                 {
+                     display: none;
+                 }
              }
          }
 
@@ -351,6 +418,7 @@
 
         .inner {
             @include padding(2em, 2em);
+            display: block;
         }
 
         &.spotlight {
@@ -408,11 +476,6 @@
     {
         &.spotlight
         {
-            .inner
-            {
-                display: block;
-            }
-
             .image
             {
                 margin: 0 0 (_size(element-margin) * 0.5) 0 !important;
@@ -423,11 +486,6 @@
 
         &.main
         {
-            .inner
-            {
-                display: block;
-            }
-
             .image
             {
                 margin: 0 0 (_size(element-margin) * 0.5) 0 !important;
