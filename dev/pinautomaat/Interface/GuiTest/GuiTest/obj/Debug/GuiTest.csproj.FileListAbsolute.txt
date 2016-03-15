@@ -1,0 +1,13 @@
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\GuiTest\GuiTest\bin\Debug\GuiTest.exe.config
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\GuiTest\GuiTest\bin\Debug\GuiTest.exe
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\GuiTest\GuiTest\bin\Debug\GuiTest.pdb
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\GuiTest\GuiTest\obj\Debug\GuiTest.csprojResolveAssemblyReference.cache
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\GuiTest\GuiTest\obj\Debug\GuiTest.GuiWindow.resources
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\GuiTest\GuiTest\obj\Debug\GuiTest.Properties.Resources.resources
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\GuiTest\GuiTest\obj\Debug\GuiTest.csproj.GenerateResource.Cache
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\GuiTest\GuiTest\obj\Debug\GuiTest.exe
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\GuiTest\GuiTest\obj\Debug\GuiTest.pdb
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\GuiTest\GuiTest\obj\Debug\GuiTest.Form2.resources
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\GuiTest\GuiTest\obj\Debug\GuiTest.Background.resources
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\GuiTest\GuiTest\obj\Debug\GuiTest.Form3.resources
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\GuiTest\GuiTest\obj\Debug\GuiTest.Form4.resources
