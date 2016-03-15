@@ -11,3 +11,10 @@
 C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-webAPI\Bankalicious-webAPI\BankClientApplication\BankClientApplication\bin\Debug\BankClientApplication.exe.config
 C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-webAPI\Bankalicious-webAPI\BankClientApplication\BankClientApplication\obj\Debug\BankClientApplication.exe
 C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-webAPI\Bankalicious-webAPI\BankClientApplication\BankClientApplication\obj\Debug\BankClientApplication.pdb
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-webAPI\Bankalicious-webAPI\BankClientApplication\BankClientApplication\bin\Debug\BankClientApplication.exe
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-webAPI\Bankalicious-webAPI\BankClientApplication\BankClientApplication\bin\Debug\BankClientApplication.pdb
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-webAPI\Bankalicious-webAPI\BankClientApplication\BankClientApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-webAPI\Bankalicious-webAPI\BankClientApplication\BankClientApplication\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-webAPI\Bankalicious-webAPI\BankClientApplication\BankClientApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-webAPI\Bankalicious-webAPI\BankClientApplication\BankClientApplication\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-webAPI\Bankalicious-webAPI\BankClientApplication\BankClientApplication\obj\Debug\BankClientApplication.csprojResolveAssemblyReference.cache
