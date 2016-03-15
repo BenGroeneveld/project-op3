@@ -62,9 +62,9 @@
     @include breakpoint(large)
     {
 
-        background-color:		_palette(bg);
+        background-color:		_palette(wrppr);
 
-        background-image:		linear-gradient(to top, transparentize(_palette(bg), _palette(wrppr-opc)), transparentize(_palette(bg), _palette(wrppr-opc))),
+        background-image:		linear-gradient(to top, transparentize(_palette(wrppr), _palette(wrppr-opc)), transparentize(_palette(wrppr), _palette(wrppr-opc))),
                                  _image(background-img);
 
         background-size:		auto,
