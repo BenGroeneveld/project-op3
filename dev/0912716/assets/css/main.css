@@ -2373,7 +2373,8 @@ body.is-menu-visible #menu {
   @media screen and (max-width: 1280px) {
     #banner {
       padding: 7em 0 5.75em 0 ;
-      background-color: #2B2B2B;
+      background-color: #333340;
+      background-image: linear-gradient(to top, rgba(51, 51, 64, 0.925), rgba(51, 51, 64, 0.925)), url("http://stud.hr.nl/0912716/images/bg3.jpg");
       background-size: auto, cover;
       background-position: center, center;
       margin-bottom: 0; } }
@@ -2442,7 +2443,8 @@ body.is-menu-visible #menu {
 @media screen and (max-width: 1280px) {
   #wrapper > header {
     padding: 9em 0 7em 0 ;
-    background-color: #2B2B2B;
+    background-color: #333340;
+    background-image: linear-gradient(to top, rgba(51, 51, 64, 0.925), rgba(51, 51, 64, 0.925)), url("http://stud.hr.nl/0912716/images/bg3.jpg");
     background-size: auto, cover;
     background-position: center, 0% 30%;
     margin-bottom: -6.5em; } }
@@ -2801,8 +2803,8 @@ body.is-menu-visible #menu {
         color: inherit; }
 @media screen and (max-width: 1280px) {
   #footer {
-    background-color: #2B2B2B;
-    background-image: linear-gradient(to top, rgba(43, 43, 43, 0.925), rgba(43, 43, 43, 0.925)), url("http://stud.hr.nl/0912716/images/bg3.jpg");
+    background-color: #333340;
+    background-image: linear-gradient(to top, rgba(51, 51, 64, 0.925), rgba(51, 51, 64, 0.925)), url("http://stud.hr.nl/0912716/images/bg3.jpg");
     background-size: auto, cover;
     background-position: center, center;
     margin-top: -6.5em;
