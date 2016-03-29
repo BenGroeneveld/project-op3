@@ -14,16 +14,6 @@ namespace TestServer2
             //we maken een nieuwe database-context. Als de database nog niet bestaat; wordt deze aangemaakt
             using (var db = new BankContext())
             {
-                //en we slaan de nieuwe dingen in de database op
-                db.SaveChanges();
-                Console.WriteLine("\nDe rekeningen zijn:");
-                foreach (var item in )
-                {
-                    Console.WriteLine("rekeningnaam: " + item.Rekening.RekeningType);
-                    Console.WriteLine("eigenaar: " + item.Klant.Naam);
-                    Console.WriteLine();
-                }
-
                 Console.WriteLine("Voer de naam in van de klant die je wilt zoeken");
                 var zoekstring = Console.ReadLine();
                 var GevondenKlant = db.Klant.Where(x => x.Naam.Contains(zoekstring)).First();
