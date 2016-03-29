@@ -11,22 +11,11 @@ namespace TestServer2
     {
         static void Main(string[] args)
         {
-            //we maken een nieuwe database-context. Als de database nog niet bestaat; wordt deze aangemaakt
-            using (var db = new BankContext())
-            {
-                Console.WriteLine("Voer de naam in van de klant die je wilt zoeken");
-                var zoekstring = Console.ReadLine();
-                var GevondenKlant = db.Klant.Where(x => x.Naam.Contains(zoekstring)).First();
-                Console.Write(GevondenKlant.Naam);
-                Console.ReadKey();
-            }
+            /*hier moet iets interessants komen te staan, maar dat staat er nu nog niet*/
                 
         }
     }
 
-    /// <summary>
-    /// door het aanmaken van een dbcontext zorg je dat er tabellen worden gemaakt met onderstaande namen Clients en Accounts
-    /// </summary>
     public class BankContext : DbContext
     {
         public BankContext() : base("MyDbContextConnectionString") { }
@@ -36,10 +25,7 @@ namespace TestServer2
         public DbSet<Transactie> Transactie { get; set; }
 
     }
-
-    /// <summary>
-    /// Dit is ons model van de klant. 
-    /// </summary>
+    
     public class Klant
     {
 

@@ -16,3 +16,12 @@ Y:\Bankalicious\TestServer2\TestServer2\obj\Debug\TestServer2.pdb
 C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-master\TestServer2\TestServer2\bin\Debug\TestServer2.exe.config
 C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-master\TestServer2\TestServer2\obj\Debug\TestServer2.exe
 C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-master\TestServer2\TestServer2\obj\Debug\TestServer2.pdb
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-master\TestServer2\TestServer2\bin\Debug\TestServer2.exe
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-master\TestServer2\TestServer2\bin\Debug\TestServer2.pdb
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-master\TestServer2\TestServer2\bin\Debug\EntityFramework.dll
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-master\TestServer2\TestServer2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-master\TestServer2\TestServer2\bin\Debug\MySql.Data.dll
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-master\TestServer2\TestServer2\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-master\TestServer2\TestServer2\bin\Debug\EntityFramework.xml
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-master\TestServer2\TestServer2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-master\TestServer2\TestServer2\obj\Debug\TestServer2.csprojResolveAssemblyReference.cache
