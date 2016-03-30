@@ -44,7 +44,7 @@ namespace WebApplication5.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != klant.KlantId)
+            if (id != klant.KlantID)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace WebApplication5.Controllers
             db.Klanten.Add(klant);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = klant.KlantId }, klant);
+            return CreatedAtRoute("DefaultApi", new { id = klant.KlantID }, klant);
         }
 
         // DELETE: api/Klants1/5
@@ -112,7 +112,7 @@ namespace WebApplication5.Controllers
 
         private bool KlantExists(int id)
         {
-            return db.Klanten.Count(e => e.KlantId == id) > 0;
+            return db.Klanten.Count(e => e.KlantID == id) > 0;
         }
     }
 }

@@ -17,7 +17,7 @@ namespace WebApplication5.Controllers
         // GET: Rekenings
         public ActionResult Index()
         {
-            var rekeningen = db.Rekeningen.Include(r => r.Klant & r.Pas);
+            var rekeningen = db.Rekeningen.Include(r => r.pas);
             return View(rekeningen.ToList());
         }
 
@@ -57,7 +57,7 @@ namespace WebApplication5.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.KlantId = new SelectList(db.Klanten, "KlantId", "Name", rekening.KlantId);
+            ViewBag.KlantId = new SelectList(db.Klanten, "KlantId", "Name", rekening.pas.KlantID);
             return View(rekening);
         }
 
@@ -73,7 +73,7 @@ namespace WebApplication5.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.KlantId = new SelectList(db.Klanten, "KlantId", "Name", rekening.KlantId);
+            ViewBag.KlantId = new SelectList(db.Klanten, "KlantId", "Name", rekening.pas.KlantID);
             return View(rekening);
         }
 
@@ -90,7 +90,7 @@ namespace WebApplication5.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.KlantId = new SelectList(db.Klanten, "KlantId", "Name", rekening.KlantId);
+            ViewBag.KlantId = new SelectList(db.Klanten, "KlantId", "Name", rekening.pas.KlantID);
             return View(rekening);
         }
 

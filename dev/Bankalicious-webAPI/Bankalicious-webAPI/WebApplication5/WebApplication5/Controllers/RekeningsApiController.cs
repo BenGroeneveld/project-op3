@@ -44,7 +44,7 @@ namespace WebApplication5.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != rekening.RekeningId)
+            if (id != rekening.RekeningID)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace WebApplication5.Controllers
             db.Rekeningen.Add(rekening);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = rekening.RekeningId }, rekening);
+            return CreatedAtRoute("DefaultApi", new { id = rekening.RekeningID }, rekening);
         }
 
         // DELETE: api/Rekenings1/5
@@ -112,7 +112,7 @@ namespace WebApplication5.Controllers
 
         private bool RekeningExists(int id)
         {
-            return db.Rekeningen.Count(e => e.RekeningId == id) > 0;
+            return db.Rekeningen.Count(e => e.RekeningID == id) > 0;
         }
     }
 }
