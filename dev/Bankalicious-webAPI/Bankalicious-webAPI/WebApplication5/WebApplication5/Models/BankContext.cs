@@ -15,5 +15,7 @@ namespace WebApplication5.Models
         }
         public DbSet<Klant> Klanten { get; set; }
         public DbSet<Rekening> Rekeningen { get; set; }
+        public DbSet<Pas> Passen { get; set; }
+        public DbSet<Transactie> Transacties { get; set; }
     }
 }

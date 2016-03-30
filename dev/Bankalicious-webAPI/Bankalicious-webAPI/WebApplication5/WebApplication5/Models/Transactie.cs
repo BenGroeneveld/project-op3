@@ -5,12 +5,11 @@ using System.Web;
 
 namespace WebApplication5.Models
 {
-    public class Rekening
+    public class Transactie
     {
+        public int TransactieID { get; set; }
         public int RekeningID { get; set; }
         public int Balans { get; set; }
-        public int RekeningType { get; set; }
-        public virtual Pas passen { get; set; }
-
+        public int PasID { get; set; }
     }
 }

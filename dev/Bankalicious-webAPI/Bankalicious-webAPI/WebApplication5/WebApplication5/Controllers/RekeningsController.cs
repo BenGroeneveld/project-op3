@@ -17,7 +17,7 @@ namespace WebApplication5.Controllers
         // GET: Rekenings
         public ActionResult Index()
         {
-            var rekeningen = db.Rekeningen.Include(r => r.Klant);
+            var rekeningen = db.Rekeningen.Include(r => r.Klant & r.Pas);
             return View(rekeningen.ToList());
         }
 

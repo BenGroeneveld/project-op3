@@ -182,8 +182,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BankContext.cs" />
+    <Compile Include="Models\Pas.cs" />
     <Compile Include="Models\Klant.cs" />
     <Compile Include="Models\Rekening.cs" />
+    <Compile Include="Models\Transactie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

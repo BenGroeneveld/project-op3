@@ -9,10 +9,11 @@ namespace WebApplication5.Models
     public class Klant
     {
         [Key]
-        public int KlantId { get; set; }
-        public string Name { get; set; }
-        public string Beschrijving { get; set; }
-        public string liefheid { get; set; }
-        public virtual ICollection<Rekening> Rekeningen { get; set; }
+        public int KlantID { get; set; }
+        public string Naam { get; set; }
+        public string Achternaam { get; set; }
+        public String Postcode { get; set; }
+        public string Adres { get; set; }
+        public virtual ICollection<Pas> Passen { get; set; }
     }
 }
