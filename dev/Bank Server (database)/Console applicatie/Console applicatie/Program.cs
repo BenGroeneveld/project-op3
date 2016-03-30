@@ -79,9 +79,8 @@ namespace TestServer2
 
     public class Klant
     {
-
-        public string Adres { get; set; }
         public int KlantID { get; set; }
+        public string Adres { get; set; }
         public string Naam { get; set; }
         public string Achternaam { get; set; }
         public String Postcode { get; set; }
