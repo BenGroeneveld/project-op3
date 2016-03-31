@@ -47,7 +47,6 @@ namespace Console_applicatie
                 Console.Write(GevondenKlant.Naam);
                 Console.ReadKey();
             }
-
         }
     }
 
