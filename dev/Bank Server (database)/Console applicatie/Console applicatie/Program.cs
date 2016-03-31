@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestServer2
+namespace Console_applicatie
 {
     class Program
     {
@@ -32,7 +33,7 @@ namespace TestServer2
                 Console.WriteLine();
                 Console.WriteLine("please enter the Pasnr: ");
                 int pasID = Convert.ToInt32(Console.ReadLine());
-                var pas = new Pas { KlantID = klantid, PasID = pasID };
+                var pas = new Pas { PasID = pasID };
                 db.Pas.Add(pas);
                 db.SaveChanges();
                
@@ -79,40 +80,49 @@ namespace TestServer2
 
     public class Klant
     {
+        [Key]
         public int KlantID { get; set; }
         public string Adres { get; set; }
         public string Naam { get; set; }
         public string Achternaam { get; set; }
         public String Postcode { get; set; }
-        public virtual List<Klant> klant { get; set; }
+        public virtual List<Pas> pas { get; set; }
+        public virtual List<Rekening> rekening { get; set; }
+        public virtual List<Transactie> transactie { get; set; }
     }
     public class Pas
     {
+        [Key]
         public int PasID { get; set; }
+        
         public int RekeningID { get; set; }
         public int KlantID { get; set; }
         public int Actief { get; set; }
         public int Pincode { get; set; }
-        public virtual Klant klant { get; set; }
-        public virtual Rekening rekening { get; set; }
-        public virtual List<Pas> pas { get; set; }
+        public virtual List<Klant> Klant { get; set; }
+        public virtual List<Rekening> rekening { get; set; }
+        public virtual List<Transactie> transactie { get; set; }
     }
     public class Rekening
     {
+        [Key]
         public int RekeningID { get; set; }
-        public int Balans { get; set; }
+        public double Balans { get; set; }
         public int RekeningType { get; set; }
-        public virtual List<Rekening> rekening { get; set; }
+        public virtual List<Klant> Klant { get; set; }
+        public virtual List<Pas> pas { get; set; }
+        public virtual List<Transactie> transactie { get; set; }
     }
     public class Transactie
     {
+        [Key]
         public int TransactieID { get; set; }
         public int RekeningID { get; set; }
-        public int Balans { get; set; }
+        public double Balans { get; set; }
         public int PasID { get; set; }
-        public virtual Rekening rekening { get; set; }
-        public virtual Pas pas { get; set; }
-        public virtual List<Transactie> transactie { get; set; }
+        public virtual List<Klant> Klant { get; set; }
+        public virtual List<Rekening> rekening { get; set; }
+        public virtual List<Pas> pas { get; set; }
     }
-
+    
 }

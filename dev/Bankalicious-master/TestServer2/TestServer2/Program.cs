@@ -77,7 +77,6 @@ namespace TestServer2
         public int ClientId { get; set; }
         public string Name { get; set; }
         public string Beschrijving { get; set; }
-
         public virtual List<Account> Accounts { get; set; }
     }
 
