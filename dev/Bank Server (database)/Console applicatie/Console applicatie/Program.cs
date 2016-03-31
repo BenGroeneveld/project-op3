@@ -68,9 +68,6 @@ namespace Console_applicatie
         public string Naam { get; set; }
         public string Achternaam { get; set; }
         public String Postcode { get; set; }
-        public virtual List<Pas> pasLs { get; set; }
-        public virtual List<Rekening> rekeningLs { get; set; }
-        public virtual List<Transactie> transactieLs { get; set; }
         public virtual Pas pas { get; set; }
         public virtual Rekening rekening { get; set; }
         public virtual Transactie transactie { get; set; }
@@ -83,9 +80,6 @@ namespace Console_applicatie
         public int KlantID { get; set; }
         public int Actief { get; set; }
         public int Pincode { get; set; }
-        public virtual List<Klant> klantLs { get; set; }
-        public virtual List<Rekening> rekeningLs { get; set; }
-        public virtual List<Transactie> transactieLs { get; set; }
         public virtual Klant klant { get; set; }
         public virtual Rekening rekening { get; set; }
         public virtual Transactie transactie { get; set; }
@@ -96,9 +90,6 @@ namespace Console_applicatie
         public int RekeningID { get; set; }
         public double Balans { get; set; }
         public int RekeningType { get; set; }
-        public virtual List<Klant> KlantLs { get; set; }
-        public virtual List<Pas> pasLs { get; set; }
-        public virtual List<Transactie> transactieLs { get; set; }
         public virtual Klant klant { get; set; }
         public virtual Pas pas { get; set; }
         public virtual Transactie transactie { get; set; }
@@ -110,9 +101,6 @@ namespace Console_applicatie
         public int RekeningID { get; set; }
         public double Balans { get; set; }
         public int PasID { get; set; }
-        public virtual List<Klant> klantLs { get; set; }
-        public virtual List<Rekening> rekeningLs { get; set; }
-        public virtual List<Pas> pasLs { get; set; }
         public virtual Klant klant { get; set; }
         //public virtual Pas pas { get; set; }
         public virtual Rekening rekening { get; set; }
