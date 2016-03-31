@@ -13,9 +13,7 @@ namespace WebApplication5.Models
         {
             base.Configuration.LazyLoadingEnabled = false; //helaas ondersteunt de huidige versie van de mysql connector geen lazy loading, dus die moeten we uitzetten
         }
-        public DbSet<Klant> Klanten { get; set; }
-        public DbSet<Rekening> Rekeningen { get; set; }
-        public DbSet<Pas> Passen { get; set; }
-        public DbSet<Transactie> Transacties { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication5.Models.Klant> Klants { get; set; }
     }
 }

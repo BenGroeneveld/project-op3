@@ -10,6 +10,6 @@ namespace WebApplication5.Models
         public int RekeningID { get; set; }
         public int Balans { get; set; }
         public int RekeningType { get; set; }
-        public virtual Pas pas { get; set; }
+       // public virtual Pas pas { get; set; }
     }
 }

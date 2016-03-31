@@ -173,10 +173,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\KlantsApiController.cs" />
     <Compile Include="Controllers\KlantsController.cs" />
-    <Compile Include="Controllers\RekeningsApiController.cs" />
-    <Compile Include="Controllers\RekeningsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -237,11 +234,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Rekenings\Create.cshtml" />
-    <Content Include="Views\Rekenings\Delete.cshtml" />
-    <Content Include="Views\Rekenings\Details.cshtml" />
-    <Content Include="Views\Rekenings\Edit.cshtml" />
-    <Content Include="Views\Rekenings\Index.cshtml" />
     <Content Include="Views\Klants\Create.cshtml" />
     <Content Include="Views\Klants\Delete.cshtml" />
     <Content Include="Views\Klants\Details.cshtml" />

@@ -68,9 +68,6 @@ namespace Console_applicatie
         public string Naam { get; set; }
         public string Achternaam { get; set; }
         public String Postcode { get; set; }
-        public virtual Pas pas { get; set; }
-        public virtual Rekening rekening { get; set; }
-        public virtual Transactie transactie { get; set; }
     }
     public class Pas
     {
@@ -90,20 +87,14 @@ namespace Console_applicatie
         public int RekeningID { get; set; }
         public double Balans { get; set; }
         public int RekeningType { get; set; }
-        public virtual Klant klant { get; set; }
-        public virtual Pas pas { get; set; }
-        public virtual Transactie transactie { get; set; }
     }
     public class Transactie
     {
         [Key]
-        public int TransactieID { get; set; }
+        public int TransactieID { get; set; } 
         public int RekeningID { get; set; }
         public double Balans { get; set; }
         public int PasID { get; set; }
-        public virtual Klant klant { get; set; }
-        //public virtual Pas pas { get; set; }
-        public virtual Rekening rekening { get; set; }
     }
     
 }

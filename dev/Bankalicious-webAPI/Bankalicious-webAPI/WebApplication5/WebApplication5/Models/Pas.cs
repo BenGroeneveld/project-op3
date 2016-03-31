@@ -13,7 +13,7 @@ namespace WebApplication5.Models
         public int Actief { get; set; }
         public int Pincode { get; set; }
 
-        public virtual Klant Klanten { get; set; }
-        public virtual Rekening Rekeningen { get; set; }
+        //public virtual Klant Klanten { get; set; }
+        //public virtual Rekening Rekeningen { get; set; }
     }
 }

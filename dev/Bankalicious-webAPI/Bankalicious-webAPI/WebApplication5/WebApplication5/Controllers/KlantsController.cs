@@ -17,7 +17,7 @@ namespace WebApplication5.Controllers
         // GET: Klants
         public ActionResult Index()
         {
-            return View(db.Klanten.ToList());
+            return View(db.Klants.ToList());
         }
 
         // GET: Klants/Details/5
@@ -27,7 +27,7 @@ namespace WebApplication5.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Klant klant = db.Klanten.Find(id);
+            Klant klant = db.Klants.Find(id);
             if (klant == null)
             {
                 return HttpNotFound();
@@ -46,11 +46,11 @@ namespace WebApplication5.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "KlantId,Name,Beschrijving,liefheid")] Klant klant)
+        public ActionResult Create([Bind(Include = "KlantID,Naam,Achternaam,Postcode,Adres")] Klant klant)
         {
             if (ModelState.IsValid)
             {
-                db.Klanten.Add(klant);
+                db.Klants.Add(klant);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace WebApplication5.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Klant klant = db.Klanten.Find(id);
+            Klant klant = db.Klants.Find(id);
             if (klant == null)
             {
                 return HttpNotFound();
@@ -78,7 +78,7 @@ namespace WebApplication5.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "KlantId,Name,Beschrijving,liefheid")] Klant klant)
+        public ActionResult Edit([Bind(Include = "KlantID,Naam,Achternaam,Postcode,Adres")] Klant klant)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace WebApplication5.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Klant klant = db.Klanten.Find(id);
+            Klant klant = db.Klants.Find(id);
             if (klant == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace WebApplication5.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Klant klant = db.Klanten.Find(id);
-            db.Klanten.Remove(klant);
+            Klant klant = db.Klants.Find(id);
+            db.Klants.Remove(klant);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
