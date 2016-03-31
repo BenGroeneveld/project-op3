@@ -24,16 +24,11 @@ namespace Console_applicatie
 
                 db.SaveChanges();
 
-                Console.WriteLine("\nDe klanten zijn:");
-
-                foreach (var item in db.Klant)
-                {
-                    Console.WriteLine(item.Naam);
-                }
+                
                 Console.WriteLine();
                 Console.WriteLine("please enter the Pasnr: ");
                 int pasID = Convert.ToInt32(Console.ReadLine());
-                var pas = new Pas { PasID = pasID };
+                var pas = new Pas { KlantID = klantid, PasID = pasID };
                 db.Pas.Add(pas);
                 db.SaveChanges();
                
@@ -42,19 +37,7 @@ namespace Console_applicatie
                 int rekeningid = Convert.ToInt32(Console.ReadLine());
                 var rekening = new Rekening { };
                 db.Rekening.Add(rekening);
-                Console.WriteLine("\nDe rekeningen zijn:");
-                foreach (var item in db.Rekening)
-                {
-                    Console.WriteLine("rekeningid: " + item.RekeningID);
-                    Console.WriteLine();
-                }
-                Console.WriteLine("\nDe Passen zijn:");
-                foreach (var item in db.Pas)
-                {
-                    Console.WriteLine("pasnaam: " + item.PasID);
-                    Console.WriteLine("eigenaarid: " + item.KlantID);
-                    Console.WriteLine();
-                }
+               
                 int transactieid = Convert.ToInt32(Console.ReadLine());
                 var transactie = new Transactie { TransactieID = transactieid, RekeningID = rekeningid};
                 db.Transactie.Add(transactie);
@@ -132,7 +115,7 @@ namespace Console_applicatie
         public virtual List<Rekening> rekeningLs { get; set; }
         public virtual List<Pas> pasLs { get; set; }
         public virtual Klant klant { get; set; }
-        public virtual Pas pas { get; set; }
+        //public virtual Pas pas { get; set; }
         public virtual Rekening rekening { get; set; }
     }
     
