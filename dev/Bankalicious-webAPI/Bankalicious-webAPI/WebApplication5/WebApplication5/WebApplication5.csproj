@@ -174,6 +174,9 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KlantsController.cs" />
+    <Compile Include="Controllers\PasController.cs" />
+    <Compile Include="Controllers\RekeningsController.cs" />
+    <Compile Include="Controllers\TransactiesController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -219,7 +222,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -239,6 +244,21 @@
     <Content Include="Views\Klants\Details.cshtml" />
     <Content Include="Views\Klants\Edit.cshtml" />
     <Content Include="Views\Klants\Index.cshtml" />
+    <Content Include="Views\Pas\Create.cshtml" />
+    <Content Include="Views\Pas\Delete.cshtml" />
+    <Content Include="Views\Pas\Details.cshtml" />
+    <Content Include="Views\Pas\Edit.cshtml" />
+    <Content Include="Views\Pas\Index.cshtml" />
+    <Content Include="Views\Rekenings\Create.cshtml" />
+    <Content Include="Views\Rekenings\Delete.cshtml" />
+    <Content Include="Views\Rekenings\Details.cshtml" />
+    <Content Include="Views\Rekenings\Edit.cshtml" />
+    <Content Include="Views\Rekenings\Index.cshtml" />
+    <Content Include="Views\Transacties\Create.cshtml" />
+    <Content Include="Views\Transacties\Delete.cshtml" />
+    <Content Include="Views\Transacties\Details.cshtml" />
+    <Content Include="Views\Transacties\Edit.cshtml" />
+    <Content Include="Views\Transacties\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

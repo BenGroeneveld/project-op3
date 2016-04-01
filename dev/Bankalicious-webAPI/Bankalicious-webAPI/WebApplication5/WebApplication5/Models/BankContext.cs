@@ -15,5 +15,11 @@ namespace WebApplication5.Models
         }
 
         public System.Data.Entity.DbSet<WebApplication5.Models.Klant> Klants { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication5.Models.Pas> Pas { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication5.Models.Rekening> Rekenings { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication5.Models.Transactie> Transacties { get; set; }
     }
 }
