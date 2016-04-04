@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity;
 
 namespace WebApplication5.Models
 {
@@ -14,12 +10,12 @@ namespace WebApplication5.Models
             base.Configuration.LazyLoadingEnabled = false; //helaas ondersteunt de huidige versie van de mysql connector geen lazy loading, dus die moeten we uitzetten
         }
 
-        public System.Data.Entity.DbSet<WebApplication5.Models.Klant> Klants { get; set; }
+        public DbSet<Klant> Klants { get; set; }
 
-        public System.Data.Entity.DbSet<WebApplication5.Models.Pas> Pas { get; set; }
+        public DbSet<Pas> Pas { get; set; }
 
-        public System.Data.Entity.DbSet<WebApplication5.Models.Rekening> Rekenings { get; set; }
+        public DbSet<Rekening> Rekenings { get; set; }
 
-        public System.Data.Entity.DbSet<WebApplication5.Models.Transactie> Transacties { get; set; }
+        public DbSet<Transactie> Transacties { get; set; }
     }
 }

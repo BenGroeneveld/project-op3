@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApplication5.Models
 {
@@ -12,6 +8,5 @@ namespace WebApplication5.Models
         public int RekeningID { get; set; }
         public int Balans { get; set; }
         public int RekeningType { get; set; }
-       // public virtual Pas pas { get; set; }
     }
 }
