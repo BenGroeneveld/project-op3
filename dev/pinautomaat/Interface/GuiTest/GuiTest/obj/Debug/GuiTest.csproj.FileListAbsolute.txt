@@ -26,3 +26,6 @@ D:\MEGA\DEV\GitHub\project-op3\dev\pinautomaat\Interface\GuiTest\GuiTest\obj\Deb
 D:\MEGA\DEV\GitHub\project-op3\dev\pinautomaat\Interface\GuiTest\GuiTest\obj\Debug\GuiTest.Welkom.resources
 D:\MEGA\DEV\GitHub\project-op3\dev\pinautomaat\Interface\GuiTest\GuiTest\obj\Debug\GuiTest.Properties.Resources.resources
 D:\MEGA\DEV\GitHub\project-op3\dev\pinautomaat\Interface\GuiTest\GuiTest\obj\Debug\GuiTest.csproj.GenerateResource.Cache
+C:\Users\Remco\Documents\GitHub\project-op3\dev\pinautomaat\Interface\GuiTest\GuiTest\bin\Debug\GuiTest.exe.config
+C:\Users\Remco\Documents\GitHub\project-op3\dev\pinautomaat\Interface\GuiTest\GuiTest\obj\Debug\GuiTest.exe
+C:\Users\Remco\Documents\GitHub\project-op3\dev\pinautomaat\Interface\GuiTest\GuiTest\obj\Debug\GuiTest.pdb
