@@ -104,9 +104,9 @@
     position: relative;
     @include wrapper-edges-color(_palette(default-color));
 
-    #preBlock, #codeBlock, #xmpBlock
+    #preBlock01
     {
-        display: none;
+        padding: 0;
     }
 
     &:before, &:after {
@@ -175,18 +175,18 @@
                      margin-bottom: 0.85em;
                      .veranderContainer
                      {
-                         width: 100%;
-                         float: left;
+                         //width: 100%;
+                         //float: left;
                          button
                          {
-                             @include quantity-query(4);
+                             @include quantity-query(1);
                          }
                      }
 
-                     .verbergContainer > button
-                     {
-                         width: 100%;
-                     }
+                     //.verbergContainer > button
+                     //{
+                     //    width: 100%;
+                     //}
 
                      @include breakpoint(large)
                      {
@@ -194,7 +194,7 @@
                          {
                              button
                              {
-                                 @include quantity-query(3);
+                                 @include quantity-query(1);
                              }
                          }
                      }
@@ -205,7 +205,7 @@
                          {
                              button
                              {
-                                 @include quantity-query(2);
+                                 @include quantity-query(1);
                              }
                          }
                      }

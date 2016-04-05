@@ -1428,7 +1428,7 @@ pre {
     display: block;
     line-height: 1.75em;
     padding: 1em 1.5em;
-    overflow-x: auto; }
+    overflow: auto; }
 
 hr {
   border: 0;
@@ -2472,8 +2472,8 @@ body.is-menu-visible #menu {
   position: relative; }
   .wrapper:before, .wrapper:after {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%232B2B2B;' /%3E%3C/svg%3E"); }
-  .wrapper #preBlock, .wrapper #codeBlock, .wrapper #xmpBlock {
-    display: none; }
+  .wrapper #preBlock01 {
+    padding: 0; }
   .wrapper:before, .wrapper:after {
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -2546,19 +2546,14 @@ body.is-menu-visible #menu {
       .wrapper.main .inner .content .docButton {
         overflow: hidden;
         margin-bottom: 0.85em; }
-        .wrapper.main .inner .content .docButton .veranderContainer {
-          width: 100%;
-          float: left; }
-          .wrapper.main .inner .content .docButton .veranderContainer button:nth-last-child(4n):first-child, .wrapper.main .inner .content .docButton .veranderContainer button:nth-last-child(4n):first-child ~ button {
-            width: 25%; }
-        .wrapper.main .inner .content .docButton .verbergContainer > button {
+        .wrapper.main .inner .content .docButton .veranderContainer button:nth-last-child(1n):first-child, .wrapper.main .inner .content .docButton .veranderContainer button:nth-last-child(1n):first-child ~ button {
           width: 100%; }
         @media screen and (max-width: 1280px) {
-          .wrapper.main .inner .content .docButton .veranderContainer button:nth-last-child(3n):first-child, .wrapper.main .inner .content .docButton .veranderContainer button:nth-last-child(3n):first-child ~ button {
-            width: 33.33333%; } }
+          .wrapper.main .inner .content .docButton .veranderContainer button:nth-last-child(1n):first-child, .wrapper.main .inner .content .docButton .veranderContainer button:nth-last-child(1n):first-child ~ button {
+            width: 100%; } }
         @media screen and (max-width: 1050px) {
-          .wrapper.main .inner .content .docButton .veranderContainer button:nth-last-child(2n):first-child, .wrapper.main .inner .content .docButton .veranderContainer button:nth-last-child(2n):first-child ~ button {
-            width: 50%; } }
+          .wrapper.main .inner .content .docButton .veranderContainer button:nth-last-child(1n):first-child, .wrapper.main .inner .content .docButton .veranderContainer button:nth-last-child(1n):first-child ~ button {
+            width: 100%; } }
         @media screen and (max-width: 836px) {
           .wrapper.main .inner .content .docButton .veranderContainer button:nth-last-child(1n):first-child, .wrapper.main .inner .content .docButton .veranderContainer button:nth-last-child(1n):first-child ~ button {
             width: 100%; } }
