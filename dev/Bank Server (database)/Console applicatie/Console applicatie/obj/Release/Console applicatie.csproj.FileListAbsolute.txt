@@ -1,1 +1,0 @@
-c:\users\remco\documents\visual studio 2015\Projects\Console applicatie\Console applicatie\bin\Release\Console applicatie.exe.config

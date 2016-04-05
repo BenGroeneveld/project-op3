@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApplication5.Models
 {
@@ -14,8 +10,5 @@ namespace WebApplication5.Models
         public int KlantID { get; set; }
         public int Actief { get; set; }
         public int Pincode { get; set; }
-
-        //public virtual Klant Klanten { get; set; }
-        //public virtual Rekening Rekeningen { get; set; }
     }
 }

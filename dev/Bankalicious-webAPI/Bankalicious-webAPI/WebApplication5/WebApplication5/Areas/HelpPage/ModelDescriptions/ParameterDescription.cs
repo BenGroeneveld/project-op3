@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace WebApplication5.Areas.HelpPage.ModelDescriptions

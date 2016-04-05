@@ -1,0 +1,5 @@
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.exe.config
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.exe
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.pdb
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.exe
+D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.pdb
