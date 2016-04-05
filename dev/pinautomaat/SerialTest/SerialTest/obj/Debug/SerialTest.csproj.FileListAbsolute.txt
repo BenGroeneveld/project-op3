@@ -1,9 +1,0 @@
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\SerialTest\SerialTest\bin\Debug\SerialTest.exe.config
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\SerialTest\SerialTest\bin\Debug\SerialTest.exe
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\SerialTest\SerialTest\bin\Debug\SerialTest.pdb
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\SerialTest\SerialTest\obj\Debug\SerialTest.csprojResolveAssemblyReference.cache
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\SerialTest\SerialTest\obj\Debug\SerialTest.exe
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\SerialTest\SerialTest\obj\Debug\SerialTest.pdb
-C:\Users\Remco\Documents\GitHub\project-op3\dev\pinautomaat\SerialTest\SerialTest\bin\Debug\SerialTest.exe.config
-C:\Users\Remco\Documents\GitHub\project-op3\dev\pinautomaat\SerialTest\SerialTest\obj\Debug\SerialTest.exe
-C:\Users\Remco\Documents\GitHub\project-op3\dev\pinautomaat\SerialTest\SerialTest\obj\Debug\SerialTest.pdb
