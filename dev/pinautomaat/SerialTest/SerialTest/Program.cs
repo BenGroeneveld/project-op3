@@ -3,7 +3,7 @@ using System.IO.Ports;
 
 namespace SerialTest
 {
-    class PortDataReceived
+    class Program
     {
         public static void Main()
         {
