@@ -1,0 +1,13 @@
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.csprojResolveAssemblyReference.cache
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.MainMenu.resources
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.Pincode.resources
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.GeldOpnemen.resources
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.Saldo.resources
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.Welkom.resources
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.csproj.GenerateResource.Cache
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\bin\Debug\Gui.exe.config
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\bin\Debug\Gui.exe
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\bin\Debug\Gui.pdb
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.Properties.Resources.resources
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.exe
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.pdb
