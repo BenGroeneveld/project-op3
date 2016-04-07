@@ -6,3 +6,9 @@ D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\SerialPortTest\SerialPortTest\obj\Debug\Se
 D:\MEGA\DEV\GitHub\project-op3\dev\pinautomaat\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.exe.config
 D:\MEGA\DEV\GitHub\project-op3\dev\pinautomaat\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.exe
 D:\MEGA\DEV\GitHub\project-op3\dev\pinautomaat\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.pdb
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\ArduinoNaarC#\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.exe.config
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\ArduinoNaarC#\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.exe
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\ArduinoNaarC#\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.pdb
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\ArduinoNaarC#\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.exe
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\ArduinoNaarC#\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.pdb
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\ArduinoNaarC#\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.csprojResolveAssemblyReference.cache

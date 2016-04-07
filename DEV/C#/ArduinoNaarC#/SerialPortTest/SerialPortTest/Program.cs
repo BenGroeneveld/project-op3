@@ -3,10 +3,13 @@ using System.IO.Ports;
 
 namespace SerialPortTest
 {
-    class Program
+    public class Program
     {
         public static void Main()
         {
+            string str = "";
+            bool checkBool = true;
+            StringComparer stringComparer = StringComparer.OrdinalIgnoreCase;
             SerialPort mySerialPort = new SerialPort("COM6");
 
             mySerialPort.BaudRate = 9600;
@@ -15,22 +18,19 @@ namespace SerialPortTest
             mySerialPort.DataBits = 8;
             mySerialPort.Handshake = Handshake.None;
             mySerialPort.RtsEnable = true;
-
-            mySerialPort.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
-
+            
             mySerialPort.Open();
+            while(checkBool)
+            {
+                str = mySerialPort.ReadLine();
+                Console.WriteLine(str);
 
-            Console.WriteLine("Press any key to continue...");
-            Console.WriteLine();
-            Console.ReadKey();
+                if(stringComparer.Equals("id_107", str))
+                {
+                    checkBool = false;
+                }
+            }
             mySerialPort.Close();
-        }
-
-        private static void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
-        {
-            SerialPort sp = (SerialPort)sender;
-            string indata = sp.ReadExisting();
-            Console.Write(indata);
         }
     }
 }

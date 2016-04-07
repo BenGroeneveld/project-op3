@@ -47,9 +47,9 @@ void loop()
       status = myRFID.AddicoreRFID_Anticoll(str);
       if(status == MI_OK)
       {
-            Serial.print("The tag's ID = ");
+            Serial.print("id_");
             Serial.println(str[0]);
-            delay(1000);
+            delay(500);
       }
       
       myRFID.AddicoreRFID_Halt();
