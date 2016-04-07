@@ -8,16 +8,10 @@ namespace SerialPortTest
         public static void Main()
         {
             string str = "";
+            string strCheck = "1";
             bool checkBool = true;
-            StringComparer stringComparer = StringComparer.OrdinalIgnoreCase;
             SerialPort mySerialPort = new SerialPort("COM6");
-
             mySerialPort.BaudRate = 9600;
-            mySerialPort.Parity = Parity.None;
-            mySerialPort.StopBits = StopBits.One;
-            mySerialPort.DataBits = 8;
-            mySerialPort.Handshake = Handshake.None;
-            mySerialPort.RtsEnable = true;
             
             mySerialPort.Open();
             while(checkBool)
@@ -25,7 +19,7 @@ namespace SerialPortTest
                 str = mySerialPort.ReadLine();
                 Console.WriteLine(str);
 
-                if(stringComparer.Equals("id_107", str))
+                if(str.Equals(strCheck, StringComparison.OrdinalIgnoreCase))
                 {
                     checkBool = false;
                 }

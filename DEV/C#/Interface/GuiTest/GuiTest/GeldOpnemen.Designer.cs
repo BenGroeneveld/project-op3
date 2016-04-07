@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUitloggen = new System.Windows.Forms.Button();
             this.btnPrintBonNiet = new System.Windows.Forms.Button();
             this.btnPrintBonWel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.inputGeldOpnemen = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,12 +54,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.091001F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090091F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnUitloggen, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.btnPrintBonNiet, 7, 9);
             this.tableLayoutPanel1.Controls.Add(this.btnPrintBonWel, 7, 6);
             this.tableLayoutPanel1.Controls.Add(this.label1, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.inputGeldOpnemen, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -77,8 +79,22 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1000, 750);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1920, 1080);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.pictureBox1, 2);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Gui.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
+            this.pictureBox1.Size = new System.Drawing.Size(348, 180);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // btnUitloggen
             // 
@@ -91,11 +107,11 @@
             this.btnUitloggen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUitloggen.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUitloggen.ForeColor = System.Drawing.Color.White;
-            this.btnUitloggen.Location = new System.Drawing.Point(90, 558);
+            this.btnUitloggen.Location = new System.Drawing.Point(174, 810);
             this.btnUitloggen.Margin = new System.Windows.Forms.Padding(0);
             this.btnUitloggen.Name = "btnUitloggen";
             this.tableLayoutPanel1.SetRowSpan(this.btnUitloggen, 2);
-            this.btnUitloggen.Size = new System.Drawing.Size(270, 124);
+            this.btnUitloggen.Size = new System.Drawing.Size(522, 178);
             this.btnUitloggen.TabIndex = 11;
             this.btnUitloggen.Text = "[C] Stoppen";
             this.btnUitloggen.UseVisualStyleBackColor = false;
@@ -112,11 +128,11 @@
             this.btnPrintBonNiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrintBonNiet.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintBonNiet.ForeColor = System.Drawing.Color.White;
-            this.btnPrintBonNiet.Location = new System.Drawing.Point(630, 558);
+            this.btnPrintBonNiet.Location = new System.Drawing.Point(1218, 810);
             this.btnPrintBonNiet.Margin = new System.Windows.Forms.Padding(0);
             this.btnPrintBonNiet.Name = "btnPrintBonNiet";
             this.tableLayoutPanel1.SetRowSpan(this.btnPrintBonNiet, 2);
-            this.btnPrintBonNiet.Size = new System.Drawing.Size(270, 124);
+            this.btnPrintBonNiet.Size = new System.Drawing.Size(522, 178);
             this.btnPrintBonNiet.TabIndex = 10;
             this.btnPrintBonNiet.Text = "[D] Ga verder zonder bon\r\n";
             this.btnPrintBonNiet.UseVisualStyleBackColor = false;
@@ -133,11 +149,11 @@
             this.btnPrintBonWel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrintBonWel.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintBonWel.ForeColor = System.Drawing.Color.White;
-            this.btnPrintBonWel.Location = new System.Drawing.Point(630, 372);
+            this.btnPrintBonWel.Location = new System.Drawing.Point(1218, 540);
             this.btnPrintBonWel.Margin = new System.Windows.Forms.Padding(0);
             this.btnPrintBonWel.Name = "btnPrintBonWel";
             this.tableLayoutPanel1.SetRowSpan(this.btnPrintBonWel, 2);
-            this.btnPrintBonWel.Size = new System.Drawing.Size(270, 124);
+            this.btnPrintBonWel.Size = new System.Drawing.Size(522, 180);
             this.btnPrintBonWel.TabIndex = 9;
             this.btnPrintBonWel.Text = "[B] Ga verder met bon\r\n";
             this.btnPrintBonWel.UseVisualStyleBackColor = false;
@@ -152,57 +168,62 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label1.Font = new System.Drawing.Font("Open Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(180, 0);
+            this.label1.Location = new System.Drawing.Point(348, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.tableLayoutPanel1.SetRowSpan(this.label1, 2);
-            this.label1.Size = new System.Drawing.Size(630, 124);
+            this.label1.Size = new System.Drawing.Size(1218, 180);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Hoeveel geld wilt u opnemen?";
+            this.label1.Text = "Hoeveel geld wilt u opnemen?\r\nTyp een veelvoud van €20,00 in.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // inputGeldOpnemen
+            // label3
             // 
-            this.inputGeldOpnemen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tableLayoutPanel1.SetColumnSpan(this.inputGeldOpnemen, 9);
-            this.inputGeldOpnemen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inputGeldOpnemen.Font = new System.Drawing.Font("Microsoft Sans Serif", 82F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputGeldOpnemen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.inputGeldOpnemen.Location = new System.Drawing.Point(90, 186);
-            this.inputGeldOpnemen.Margin = new System.Windows.Forms.Padding(0);
-            this.inputGeldOpnemen.Name = "inputGeldOpnemen";
-            this.inputGeldOpnemen.Size = new System.Drawing.Size(810, 124);
-            this.inputGeldOpnemen.TabIndex = 8;
-            this.inputGeldOpnemen.Text = "20";
-            this.inputGeldOpnemen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label3.Font = new System.Drawing.Font("Open Sans", 100F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label3.Location = new System.Drawing.Point(174, 270);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
+            this.label3.Name = "label3";
+            this.tableLayoutPanel1.SetRowSpan(this.label3, 2);
+            this.label3.Size = new System.Drawing.Size(174, 180);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "€";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // label2
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.pictureBox1, 2);
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Gui.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(180, 124);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel1.SetColumnSpan(this.label2, 8);
+            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label2.Font = new System.Drawing.Font("Open Sans", 100F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label2.Location = new System.Drawing.Point(348, 270);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.tableLayoutPanel1.SetRowSpan(this.label2, 2);
+            this.label2.Size = new System.Drawing.Size(1392, 180);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "<Bedrag />";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // GeldOpnemen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1000, 750);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GeldOpnemen";
             this.Text = "Form3";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -212,10 +233,11 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox inputGeldOpnemen;
         private System.Windows.Forms.Button btnPrintBonNiet;
         private System.Windows.Forms.Button btnPrintBonWel;
         private System.Windows.Forms.Button btnUitloggen;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -49,7 +49,7 @@ void loop()
       {
             Serial.print("id_");
             Serial.println(str[0]);
-            delay(500);
+            delay(10);
       }
       
       myRFID.AddicoreRFID_Halt();
