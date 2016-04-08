@@ -21,3 +21,6 @@ C:\Users\Remco\Documents\GitHub\project-op3\dev\Bankalicious-webAPI\Bankalicious
 D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Db\Bankalicious-webAPI\BankClientApplication\BankClientApplication\bin\Debug\BankClientApplication.exe.config
 D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Db\Bankalicious-webAPI\BankClientApplication\BankClientApplication\obj\Debug\BankClientApplication.exe
 D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Db\Bankalicious-webAPI\BankClientApplication\BankClientApplication\obj\Debug\BankClientApplication.pdb
+C:\Users\Remco\Documents\GitHub\project-op3\DEV\C#\Db\BankClientApplication\BankClientApplication\bin\Debug\BankClientApplication.exe.config
+C:\Users\Remco\Documents\GitHub\project-op3\DEV\C#\Db\BankClientApplication\BankClientApplication\obj\Debug\BankClientApplication.exe
+C:\Users\Remco\Documents\GitHub\project-op3\DEV\C#\Db\BankClientApplication\BankClientApplication\obj\Debug\BankClientApplication.pdb
