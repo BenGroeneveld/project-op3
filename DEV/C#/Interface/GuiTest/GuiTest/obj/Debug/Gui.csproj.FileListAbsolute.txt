@@ -11,3 +11,4 @@ D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\bin\Debug\Gui.pd
 D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.Properties.Resources.resources
 D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.exe
 D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.pdb
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.Background.resources

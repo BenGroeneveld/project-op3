@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gui
@@ -20,20 +12,23 @@ namespace Gui
         
         private void btnUitloggen_Click(object sender, EventArgs e)
         {
-            new Welkom().Show();
-            this.Hide();
+            Application.Restart();
         }
 
         private void btnSaldo_Click(object sender, EventArgs e)
         {
-            new Saldo().Show();
+            var saldoForm = new Saldo();
+            saldoForm.Show();
             this.Hide();
+            saldoForm.Closed += (s, args) => this.Close();
         }
 
         private void btnGeldOpnemen_Click(object sender, EventArgs e)
         {
-            new GeldOpnemen().Show();
+            var geldOpnemenForm = new GeldOpnemen();
+            geldOpnemenForm.Show();
             this.Hide();
+            geldOpnemenForm.Closed += (s, args) => this.Close();
         }
     }
 }

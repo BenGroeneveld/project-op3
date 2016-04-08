@@ -1,5 +1,5 @@
 ﻿using System;
-using System.IO.Ports;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Gui
@@ -14,7 +14,7 @@ namespace Gui
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Welkom());
+            Application.Run(new Background());
         }
     }
 }
