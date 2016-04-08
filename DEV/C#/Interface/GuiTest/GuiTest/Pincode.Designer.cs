@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtCardID = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.btnVolgende = new System.Windows.Forms.Button();
             this.btnUitloggen = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCardID = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,8 +85,25 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1920, 1053);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1916, 1053);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // txtCardID
+            // 
+            this.txtCardID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tableLayoutPanel1.SetColumnSpan(this.txtCardID, 2);
+            this.txtCardID.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtCardID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCardID.Font = new System.Drawing.Font("Open Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCardID.ForeColor = System.Drawing.Color.White;
+            this.txtCardID.Location = new System.Drawing.Point(1566, 0);
+            this.txtCardID.Margin = new System.Windows.Forms.Padding(0);
+            this.txtCardID.Name = "txtCardID";
+            this.tableLayoutPanel1.SetRowSpan(this.txtCardID, 2);
+            this.txtCardID.Size = new System.Drawing.Size(350, 174);
+            this.txtCardID.TabIndex = 17;
+            this.txtCardID.Text = "cardID";
+            this.txtCardID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox3
             // 
@@ -241,23 +258,6 @@
             this.label2.Text = "Voer uw pincode in";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtCardID
-            // 
-            this.txtCardID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tableLayoutPanel1.SetColumnSpan(this.txtCardID, 2);
-            this.txtCardID.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtCardID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCardID.Font = new System.Drawing.Font("Open Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCardID.ForeColor = System.Drawing.Color.White;
-            this.txtCardID.Location = new System.Drawing.Point(1566, 0);
-            this.txtCardID.Margin = new System.Windows.Forms.Padding(0);
-            this.txtCardID.Name = "txtCardID";
-            this.tableLayoutPanel1.SetRowSpan(this.txtCardID, 2);
-            this.txtCardID.Size = new System.Drawing.Size(354, 174);
-            this.txtCardID.TabIndex = 17;
-            this.txtCardID.Text = "cardID";
-            this.txtCardID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // timer1
             // 
             this.timer1.Interval = 2000;
@@ -267,7 +267,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1920, 1053);
+            this.ClientSize = new System.Drawing.Size(1916, 1053);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;

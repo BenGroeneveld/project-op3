@@ -17,8 +17,7 @@ namespace Gui
 
         private void btnUitloggen_Click(object sender, EventArgs e)
         {
-            new Welkom().Show();
-            this.Close();
+            Application.Restart();
         }
 
         private void btnVolgende_Click(object sender, EventArgs e)
@@ -33,8 +32,10 @@ namespace Gui
                 }
                 else
                 {
-                    new MainMenu().Show();
-                    this.Close();
+                    var mainMenuForm = new MainMenu();
+                    mainMenuForm.Show();
+                    this.Hide();
+                    mainMenuForm.Closed += (s, args) => this.Close();
                 }
             }
             catch
@@ -82,8 +83,15 @@ namespace Gui
         public void checkPincode()
         {
             approval = true;
-            int i = ArduinoInput.intInputText();
-            inputInloggen.Text = Convert.ToString(i);
+            try
+            {
+                int i = ArduinoInput.intInputText();
+                inputInloggen.Text = Convert.ToString(i);
+            }
+            catch
+            {
+                label2.Text = "Error while converting.";
+            }
         }
 
         private void clearPincode()
@@ -97,6 +105,7 @@ namespace Gui
 
         private void Pincode_Shown(object sender, EventArgs e)
         {
+            System.Threading.Thread.Sleep(200);
             setup();
             checkPincode();
         }

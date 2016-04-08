@@ -112,7 +112,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Welkom";
-            this.Text = "Form5";
+            this.Text = "PINAUTOMAAT";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Shown += new System.EventHandler(this.Welkom_Shown);
             this.tableLayoutPanel1.ResumeLayout(false);
