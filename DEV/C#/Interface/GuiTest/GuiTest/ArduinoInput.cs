@@ -5,6 +5,7 @@ namespace Gui
 {
     public static class ArduinoInput
     {
+        public static string strCardID = "";
         public static string strInputText()
         {
             SerialPort mySerialPort = new SerialPort("COM6");
@@ -36,6 +37,22 @@ namespace Gui
 
             int i = Convert.ToInt32(str);
             return i;
+        }
+
+        public static string strRFID()
+        {
+            SerialPort mySerialPort = new SerialPort("COM6");
+            mySerialPort.BaudRate = 9600;
+            string strCard = "ID";
+
+            mySerialPort.Open();
+            while(!strCardID.Contains(strCard))
+            {
+                strCardID = mySerialPort.ReadLine().ToString().Trim();
+            }
+            mySerialPort.Close();
+
+            return strCardID;
         }
     }
 }

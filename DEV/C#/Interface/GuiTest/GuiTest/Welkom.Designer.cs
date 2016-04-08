@@ -89,7 +89,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Welkom!\r\nUw pas a.u.b.\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.DoubleClick += new System.EventHandler(this.label1_DoubleClick);
             // 
             // pictureBox1
             // 
@@ -115,6 +114,7 @@
             this.Name = "Welkom";
             this.Text = "Form5";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Shown += new System.EventHandler(this.Welkom_Shown);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

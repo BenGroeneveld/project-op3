@@ -6,6 +6,7 @@ AddicoreRFID myRFID;
 const int chipSelectPin = 10;
 const int NRSTPD = 9;
 int maxLength = 16;
+unsigned char activeCard = '0';
 
 const byte ROWS = 4;
 const byte COLS = 4;
@@ -30,33 +31,42 @@ void setup()
       digitalWrite(chipSelectPin, LOW);
       pinMode(NRSTPD,OUTPUT);
       digitalWrite(NRSTPD, HIGH);
-      myRFID.AddicoreRFID_Init();  
+      myRFID.AddicoreRFID_Init();
 }
 
 void loop()
+{
+      rfidInput();
+      keypadInput();
+}
+
+void rfidInput()
 {
       unsigned char i, tmp, checksum1;
       unsigned char status;
       unsigned char str[maxLength];
       unsigned char RC_size;
       unsigned char blockAddr;
-      String mynum = "";
-      str[1] = 0x4400;
-
       status = myRFID.AddicoreRFID_Request(PICC_REQIDL, str); 
       status = myRFID.AddicoreRFID_Anticoll(str);
       if(status == MI_OK)
       {
-            Serial.print("id_");
-            Serial.println(str[0]);
-            delay(10);
+            if(activeCard != str[0])
+            {
+                  Serial.print("ID");
+                  Serial.println(str[0]);
+                  activeCard = str[0];
+            }
       }
-      
       myRFID.AddicoreRFID_Halt();
-      
+}
+
+void keypadInput()
+{
       char key = kpad.getKey();
       if (key)
       {
           Serial.println(key);
       }
 }
+

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -37,6 +38,8 @@
             this.btnVolgende = new System.Windows.Forms.Button();
             this.btnUitloggen = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtCardID = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +58,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.091001F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090091F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.Controls.Add(this.txtCardID, 9, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox3, 8, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBox2, 6, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 4, 3);
@@ -81,7 +85,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1920, 1080);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1920, 1053);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // textBox3
@@ -91,7 +95,7 @@
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 119F, System.Drawing.FontStyle.Bold);
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.textBox3.Location = new System.Drawing.Point(1392, 270);
+            this.textBox3.Location = new System.Drawing.Point(1392, 261);
             this.textBox3.Margin = new System.Windows.Forms.Padding(0);
             this.textBox3.MaxLength = 1;
             this.textBox3.Name = "textBox3";
@@ -111,7 +115,7 @@
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 119F, System.Drawing.FontStyle.Bold);
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.textBox2.Location = new System.Drawing.Point(1044, 270);
+            this.textBox2.Location = new System.Drawing.Point(1044, 261);
             this.textBox2.Margin = new System.Windows.Forms.Padding(0);
             this.textBox2.MaxLength = 1;
             this.textBox2.Name = "textBox2";
@@ -131,7 +135,7 @@
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 119F, System.Drawing.FontStyle.Bold);
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.textBox1.Location = new System.Drawing.Point(696, 270);
+            this.textBox1.Location = new System.Drawing.Point(696, 261);
             this.textBox1.Margin = new System.Windows.Forms.Padding(0);
             this.textBox1.MaxLength = 1;
             this.textBox1.Name = "textBox1";
@@ -153,7 +157,7 @@
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(348, 180);
+            this.pictureBox1.Size = new System.Drawing.Size(348, 174);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -165,7 +169,7 @@
             this.inputInloggen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.inputInloggen.Font = new System.Drawing.Font("Microsoft Sans Serif", 119F, System.Drawing.FontStyle.Bold);
             this.inputInloggen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.inputInloggen.Location = new System.Drawing.Point(348, 270);
+            this.inputInloggen.Location = new System.Drawing.Point(348, 261);
             this.inputInloggen.Margin = new System.Windows.Forms.Padding(0);
             this.inputInloggen.MaxLength = 1;
             this.inputInloggen.Name = "inputInloggen";
@@ -189,11 +193,11 @@
             this.btnVolgende.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolgende.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolgende.ForeColor = System.Drawing.Color.White;
-            this.btnVolgende.Location = new System.Drawing.Point(1218, 807);
+            this.btnVolgende.Location = new System.Drawing.Point(1218, 782);
             this.btnVolgende.Margin = new System.Windows.Forms.Padding(0);
             this.btnVolgende.Name = "btnVolgende";
             this.tableLayoutPanel1.SetRowSpan(this.btnVolgende, 2);
-            this.btnVolgende.Size = new System.Drawing.Size(522, 180);
+            this.btnVolgende.Size = new System.Drawing.Size(522, 174);
             this.btnVolgende.TabIndex = 10;
             this.btnVolgende.Text = "[D] OK";
             this.btnVolgende.UseVisualStyleBackColor = false;
@@ -210,11 +214,11 @@
             this.btnUitloggen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUitloggen.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUitloggen.ForeColor = System.Drawing.Color.White;
-            this.btnUitloggen.Location = new System.Drawing.Point(174, 807);
+            this.btnUitloggen.Location = new System.Drawing.Point(174, 782);
             this.btnUitloggen.Margin = new System.Windows.Forms.Padding(0);
             this.btnUitloggen.Name = "btnUitloggen";
             this.tableLayoutPanel1.SetRowSpan(this.btnUitloggen, 2);
-            this.btnUitloggen.Size = new System.Drawing.Size(522, 180);
+            this.btnUitloggen.Size = new System.Drawing.Size(522, 174);
             this.btnUitloggen.TabIndex = 9;
             this.btnUitloggen.Text = "[C] Stoppen";
             this.btnUitloggen.UseVisualStyleBackColor = false;
@@ -232,17 +236,38 @@
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.tableLayoutPanel1.SetRowSpan(this.label2, 2);
-            this.label2.Size = new System.Drawing.Size(1218, 180);
+            this.label2.Size = new System.Drawing.Size(1218, 174);
             this.label2.TabIndex = 4;
             this.label2.Text = "Voer uw pincode in";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtCardID
+            // 
+            this.txtCardID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tableLayoutPanel1.SetColumnSpan(this.txtCardID, 2);
+            this.txtCardID.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtCardID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCardID.Font = new System.Drawing.Font("Open Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCardID.ForeColor = System.Drawing.Color.White;
+            this.txtCardID.Location = new System.Drawing.Point(1566, 0);
+            this.txtCardID.Margin = new System.Windows.Forms.Padding(0);
+            this.txtCardID.Name = "txtCardID";
+            this.tableLayoutPanel1.SetRowSpan(this.txtCardID, 2);
+            this.txtCardID.Size = new System.Drawing.Size(354, 174);
+            this.txtCardID.TabIndex = 17;
+            this.txtCardID.Text = "cardID";
+            this.txtCardID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 2000;
             // 
             // Pincode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1053);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -251,7 +276,7 @@
             this.Name = "Pincode";
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Pincode_Load);
+            this.Shown += new System.EventHandler(this.Pincode_Shown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -269,5 +294,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label txtCardID;
+        private System.Windows.Forms.Timer timer1;
     }
 }

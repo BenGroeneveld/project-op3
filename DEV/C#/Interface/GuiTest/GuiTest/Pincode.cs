@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace Gui
@@ -7,6 +6,10 @@ namespace Gui
     public partial class Pincode : Form
     {
         public int password = 0;
+        private int correctPassword = 0;
+        private string cardID = ArduinoInput.strCardID;
+        private bool approval = false;
+
         public Pincode()
         {
             InitializeComponent();
@@ -22,53 +25,116 @@ namespace Gui
         {
             try
             {
-                if(password == 1234)
+                if(password != correctPassword)
                 {
-                    new MainMenu().Show();
-                    this.Close();
+                    clearPincode();
+                    label2.Text = "Verkeerd wachtwoord";
+                    checkPincode();
                 }
                 else
                 {
-                    MessageBox.Show("Verkeerd wachtwoord! Probeer opnieuw!");
-                    new Pincode().Show();
+                    new MainMenu().Show();
                     this.Close();
                 }
             }
             catch
             {
-                MessageBox.Show("ERROR lullo");
+                label2.Text = "Error! You broke it. Nice job!";
             }
+        }
+
+        private void setCorrectPassword()
+        {
+            if(cardID.Equals("ID107"))
+            {
+                correctPassword = 1070;
+            }
+            else if(cardID.Equals("ID182"))
+            {
+                correctPassword = 1820;
+            }
+            else if(cardID.Equals("ID231"))
+            {
+                correctPassword = 2310;
+            }
+            else
+            {
+                label2.Text = "Error! You broke it. Nice job! Password shizzles.";
+            }
+        }
+
+        public void setCardID()
+        {
+            privateSetCardID(cardID);
+        }
+
+        private void privateSetCardID(string str)
+        {
+            txtCardID.Text = str;
+        }
+
+        public void setup()
+        {
+            setCardID();
+            setCorrectPassword();
+        }
+
+        public void checkPincode()
+        {
+            approval = true;
+            int i = ArduinoInput.intInputText();
+            inputInloggen.Text = Convert.ToString(i);
+        }
+
+        private void clearPincode()
+        {
+            approval = false;
+            inputInloggen.Text = "";
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+        }
+
+        private void Pincode_Shown(object sender, EventArgs e)
+        {
+            setup();
+            checkPincode();
         }
 
         private void inputInloggen_TextChanged(object sender, EventArgs e)
         {
-            int i = ArduinoInput.intInputText();
-            textBox1.Text = Convert.ToString(i);
+            if(approval)
+            {
+                int i = ArduinoInput.intInputText();
+                textBox1.Text = Convert.ToString(i);
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            int i = ArduinoInput.intInputText();
-            textBox2.Text = Convert.ToString(i);
+            if(approval)
+            {
+                int i = ArduinoInput.intInputText();
+                textBox2.Text = Convert.ToString(i);
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            int i = ArduinoInput.intInputText();
-            textBox3.Text = Convert.ToString(i);
+            if(approval)
+            {
+                int i = ArduinoInput.intInputText();
+                textBox3.Text = Convert.ToString(i);
+            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            string passwordStr = inputInloggen.Text + textBox1.Text + textBox2.Text + textBox3.Text;
-            int passwordInt = Convert.ToInt32(passwordStr);
-            password = passwordInt;
-        }
-
-        private void Pincode_Load(object sender, EventArgs e)
-        {
-            int i = ArduinoInput.intInputText();
-            inputInloggen.Text = Convert.ToString(i);
+            if(approval)
+            {
+                string passwordStr = inputInloggen.Text + textBox1.Text + textBox2.Text + textBox3.Text;
+                password = Convert.ToInt32(passwordStr);
+            }
         }
     }
 }

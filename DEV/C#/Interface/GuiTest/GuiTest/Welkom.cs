@@ -10,10 +10,16 @@ namespace Gui
             InitializeComponent();
         }
 
-        private void label1_DoubleClick(object sender, EventArgs e)
+        private void checkCard()
         {
+            ArduinoInput.strCardID = ArduinoInput.strRFID();
             new Pincode().Show();
-            this.Hide();
+            Hide();
+        }
+
+        private void Welkom_Shown(object sender, EventArgs e)
+        {
+            checkCard();
         }
     }
 }
