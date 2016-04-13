@@ -96,6 +96,12 @@ void handshake()
                   if(inputByte_3 == 255)
                   {
                         activeCard = previousCard;
+                        Serial.print("activeCard: ");
+                        Serial.println(activeCard);
+                  }
+                  else
+                  {
+                        activeCard = '0';
                   }
            }
            else if(inputByte_1 == 128)

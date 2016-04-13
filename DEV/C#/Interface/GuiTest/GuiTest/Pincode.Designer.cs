@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtCardID = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -39,7 +39,6 @@
             this.btnVolgende = new System.Windows.Forms.Button();
             this.btnUitloggen = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,14 +57,15 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.091001F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090091F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.Controls.Add(this.button1, 2, 6);
             this.tableLayoutPanel1.Controls.Add(this.txtCardID, 9, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox3, 8, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBox2, 6, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 4, 3);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.inputInloggen, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnVolgende, 7, 9);
-            this.tableLayoutPanel1.Controls.Add(this.btnUitloggen, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.btnVolgende, 6, 9);
+            this.tableLayoutPanel1.Controls.Add(this.btnUitloggen, 2, 9);
             this.tableLayoutPanel1.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -87,6 +87,27 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1916, 1053);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tableLayoutPanel1.SetColumnSpan(this.button1, 3);
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(348, 521);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.tableLayoutPanel1.SetRowSpan(this.button1, 2);
+            this.button1.Size = new System.Drawing.Size(522, 174);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "[A] Corrigeer bedrag";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtCardID
             // 
@@ -116,7 +137,6 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(0);
             this.textBox3.MaxLength = 1;
             this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(174, 180);
             this.textBox3.TabIndex = 16;
@@ -136,7 +156,6 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(0);
             this.textBox2.MaxLength = 1;
             this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(174, 180);
             this.textBox2.TabIndex = 15;
@@ -156,7 +175,6 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(0);
             this.textBox1.MaxLength = 1;
             this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(174, 180);
             this.textBox1.TabIndex = 14;
@@ -190,7 +208,6 @@
             this.inputInloggen.Margin = new System.Windows.Forms.Padding(0);
             this.inputInloggen.MaxLength = 1;
             this.inputInloggen.Name = "inputInloggen";
-            this.inputInloggen.PasswordChar = '*';
             this.inputInloggen.ReadOnly = true;
             this.inputInloggen.Size = new System.Drawing.Size(174, 180);
             this.inputInloggen.TabIndex = 12;
@@ -210,7 +227,7 @@
             this.btnVolgende.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolgende.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolgende.ForeColor = System.Drawing.Color.White;
-            this.btnVolgende.Location = new System.Drawing.Point(1218, 782);
+            this.btnVolgende.Location = new System.Drawing.Point(1044, 782);
             this.btnVolgende.Margin = new System.Windows.Forms.Padding(0);
             this.btnVolgende.Name = "btnVolgende";
             this.tableLayoutPanel1.SetRowSpan(this.btnVolgende, 2);
@@ -231,7 +248,7 @@
             this.btnUitloggen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUitloggen.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUitloggen.ForeColor = System.Drawing.Color.White;
-            this.btnUitloggen.Location = new System.Drawing.Point(174, 782);
+            this.btnUitloggen.Location = new System.Drawing.Point(348, 782);
             this.btnUitloggen.Margin = new System.Windows.Forms.Padding(0);
             this.btnUitloggen.Name = "btnUitloggen";
             this.tableLayoutPanel1.SetRowSpan(this.btnUitloggen, 2);
@@ -258,10 +275,6 @@
             this.label2.Text = "Voer uw pincode in";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 2000;
-            // 
             // Pincode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
@@ -274,7 +287,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Pincode";
-            this.Text = "Form2";
+            this.Text = "Pincode";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Shown += new System.EventHandler(this.Pincode_Shown);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -295,6 +308,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label txtCardID;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
     }
 }

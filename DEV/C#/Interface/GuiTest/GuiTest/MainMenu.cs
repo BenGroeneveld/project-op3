@@ -9,11 +9,6 @@ namespace Gui
         {
             InitializeComponent();
         }
-        
-        private void btnUitloggen_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
 
         private void btnSaldo_Click(object sender, EventArgs e)
         {
@@ -23,12 +18,44 @@ namespace Gui
             saldoForm.Closed += (s, args) => this.Close();
         }
 
+        private void btnStoppen_Click(object sender, EventArgs e)
+        {
+            MainBackend.restart();
+        }
+
         private void btnGeldOpnemen_Click(object sender, EventArgs e)
         {
             var geldOpnemenForm = new GeldOpnemen();
             geldOpnemenForm.Show();
             this.Hide();
             geldOpnemenForm.Closed += (s, args) => this.Close();
+        }
+
+        private void checkButtonPushed()
+        {
+            string str = "";
+            while(str.Equals("") || !(str.Equals("B") || str.Equals("C") || str.Equals("D")))
+            {
+                str = ArduinoInput.strInputText();
+                if(str.Equals("B"))
+                {
+                    btnSaldo.PerformClick();
+                }
+                else if(str.Equals("C"))
+                {
+                    btnStoppen.PerformClick();
+                }
+                else if(str.Equals("D"))
+                {
+                    btnGeldOpnemen.PerformClick();
+                }
+            }
+        }
+
+        private void MainMenu_Shown(object sender, EventArgs e)
+        {
+            Application.DoEvents();
+            checkButtonPushed();
         }
     }
 }

@@ -8,7 +8,9 @@ namespace Gui
         public int password = 0;
         private int correctPassword = 0;
         private string cardID = ArduinoInput.strCardID;
-        private bool approval = false;
+        private bool uitloggen = false;
+        private bool approval = true;
+        private bool correctie = false;
 
         public Pincode()
         {
@@ -17,7 +19,7 @@ namespace Gui
 
         private void btnUitloggen_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            MainBackend.restart();
         }
 
         private void btnVolgende_Click(object sender, EventArgs e)
@@ -26,22 +28,41 @@ namespace Gui
             {
                 if(password != correctPassword)
                 {
+                    approval = false;
                     clearPincode();
                     label2.Text = "Verkeerd wachtwoord";
-                    checkPincode();
+                    approval = true;
+                    setup();
+
+                    string str = strNumberPushed();
+                    inputInloggen.Text = str;
+                    checkButtonPushed();
                 }
                 else
                 {
-                    var mainMenuForm = new MainMenu();
-                    mainMenuForm.Show();
-                    this.Hide();
-                    mainMenuForm.Closed += (s, args) => this.Close();
+                    nextPage();
                 }
             }
             catch
             {
-                label2.Text = "Error! You broke it. Nice job!";
+                label2.Text = "Error! [NXTc]";
             }
+        }
+
+        public void setup()
+        {
+            setCardID();
+            setCorrectPassword();
+        }
+
+        public void setCardID()
+        {
+            privateSetCardID(cardID);
+        }
+
+        private void privateSetCardID(string str)
+        {
+            txtCardID.Text = str;
         }
 
         private void setCorrectPassword()
@@ -60,43 +81,12 @@ namespace Gui
             }
             else
             {
-                label2.Text = "Error! You broke it. Nice job! Password shizzles.";
-            }
-        }
-
-        public void setCardID()
-        {
-            privateSetCardID(cardID);
-        }
-
-        private void privateSetCardID(string str)
-        {
-            txtCardID.Text = str;
-        }
-
-        public void setup()
-        {
-            setCardID();
-            setCorrectPassword();
-        }
-
-        public void checkPincode()
-        {
-            approval = true;
-            try
-            {
-                int i = ArduinoInput.intInputText();
-                inputInloggen.Text = Convert.ToString(i);
-            }
-            catch
-            {
-                label2.Text = "Error while converting.";
+                label2.Text = "Error! [PW01]";
             }
         }
 
         private void clearPincode()
         {
-            approval = false;
             inputInloggen.Text = "";
             textBox1.Text = "";
             textBox2.Text = "";
@@ -105,44 +95,168 @@ namespace Gui
 
         private void Pincode_Shown(object sender, EventArgs e)
         {
-            System.Threading.Thread.Sleep(200);
+            Application.DoEvents();
             setup();
-            checkPincode();
+
+            string str = strNumberPushed();
+            if(correctie)
+            {
+                button1.PerformClick();
+            }
+            else if(uitloggen)
+            {
+                btnUitloggen.PerformClick();
+            }
+            else
+            {
+                inputInloggen.Text = str;
+            }
+        }
+
+        private string strNumberPushed()
+        {
+            string str = "";
+            string strNumber = "";
+
+            if(approval)
+            {
+                while(str.Equals("") || str.Equals("B") || str.Equals("D"))
+                {
+                    str = ArduinoInput.strInputText();
+                    if(str.Equals("A"))
+                    {
+                        correctie = true;
+                    }
+                    else if(str.Equals("C"))
+                    {
+                        uitloggen = true;
+                    }
+                    else
+                    {
+                        strNumber = str;
+                    }
+                }
+            }
+            return strNumber;
+        }
+
+        private void checkButtonPushed()
+        {
+            string str = ArduinoInput.strInputText();
+
+            if(str.Equals("A"))
+            {
+                button1.PerformClick();
+            }
+            else if(str.Equals("C"))
+            {
+                btnUitloggen.PerformClick();
+            }
+            else if(str.Equals("D"))
+            {
+                btnVolgende.PerformClick();
+            }
         }
 
         private void inputInloggen_TextChanged(object sender, EventArgs e)
         {
-            if(approval)
+            if(!inputInloggen.Text.Equals(""))
             {
-                int i = ArduinoInput.intInputText();
-                textBox1.Text = Convert.ToString(i);
+                string str = strNumberPushed();
+                if(correctie)
+                {
+                    button1.PerformClick();
+                }
+                else if(uitloggen)
+                {
+                    btnUitloggen.PerformClick();
+                }
+                else
+                {
+                    textBox1.Text = str;
+                }
             }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if(approval)
+            if(!textBox1.Text.Equals(""))
             {
-                int i = ArduinoInput.intInputText();
-                textBox2.Text = Convert.ToString(i);
+                string str = strNumberPushed();
+                if(correctie)
+                {
+                    button1.PerformClick();
+                }
+                else if(uitloggen)
+                {
+                    btnUitloggen.PerformClick();
+                }
+                else
+                {
+                    textBox2.Text = str;
+                }
             }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if(approval)
+            if(!textBox2.Text.Equals(""))
             {
-                int i = ArduinoInput.intInputText();
-                textBox3.Text = Convert.ToString(i);
+                string str = strNumberPushed();
+                if(correctie)
+                {
+                    button1.PerformClick();
+                }
+                else if(uitloggen)
+                {
+                    btnUitloggen.PerformClick();
+                }
+                else
+                {
+                    textBox3.Text = str;
+                }
             }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            if(approval)
+            if(!textBox3.Text.Equals(""))
             {
                 string passwordStr = inputInloggen.Text + textBox1.Text + textBox2.Text + textBox3.Text;
                 password = Convert.ToInt32(passwordStr);
+                checkButtonPushed();
+            }
+        }
+
+        private void nextPage()
+        {
+            var next = new MainMenu();
+            next.Show();
+            Hide();
+            next.Closed += (s, args) => Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            approval = false;
+
+            clearPincode();
+
+            correctie = false;
+            approval = true;
+
+            string str = strNumberPushed();
+            if(correctie)
+            {
+                button1.PerformClick();
+            }
+            else if(uitloggen)
+            {
+                btnUitloggen.PerformClick();
+            }
+            else
+            {
+                inputInloggen.Text = str;
             }
         }
     }

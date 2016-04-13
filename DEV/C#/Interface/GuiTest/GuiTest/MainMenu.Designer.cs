@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnVorigeOfUitloggen = new System.Windows.Forms.Button();
+            this.btnStoppen = new System.Windows.Forms.Button();
             this.btnGeldOpnemen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSaldo = new System.Windows.Forms.Button();
@@ -50,10 +50,10 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.091001F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090091F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel1.Controls.Add(this.btnVorigeOfUitloggen, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.btnGeldOpnemen, 7, 9);
+            this.tableLayoutPanel1.Controls.Add(this.btnStoppen, 2, 9);
+            this.tableLayoutPanel1.Controls.Add(this.btnGeldOpnemen, 6, 9);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnSaldo, 7, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnSaldo, 6, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -75,26 +75,26 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1000, 750);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // btnVorigeOfUitloggen
+            // btnStoppen
             // 
-            this.btnVorigeOfUitloggen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.tableLayoutPanel1.SetColumnSpan(this.btnVorigeOfUitloggen, 3);
-            this.btnVorigeOfUitloggen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVorigeOfUitloggen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVorigeOfUitloggen.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnVorigeOfUitloggen.FlatAppearance.BorderSize = 0;
-            this.btnVorigeOfUitloggen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVorigeOfUitloggen.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVorigeOfUitloggen.ForeColor = System.Drawing.Color.White;
-            this.btnVorigeOfUitloggen.Location = new System.Drawing.Point(90, 558);
-            this.btnVorigeOfUitloggen.Margin = new System.Windows.Forms.Padding(0);
-            this.btnVorigeOfUitloggen.Name = "btnVorigeOfUitloggen";
-            this.tableLayoutPanel1.SetRowSpan(this.btnVorigeOfUitloggen, 2);
-            this.btnVorigeOfUitloggen.Size = new System.Drawing.Size(270, 124);
-            this.btnVorigeOfUitloggen.TabIndex = 6;
-            this.btnVorigeOfUitloggen.Text = "[C] Stoppen";
-            this.btnVorigeOfUitloggen.UseVisualStyleBackColor = false;
-            this.btnVorigeOfUitloggen.Click += new System.EventHandler(this.btnUitloggen_Click);
+            this.btnStoppen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tableLayoutPanel1.SetColumnSpan(this.btnStoppen, 3);
+            this.btnStoppen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStoppen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnStoppen.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnStoppen.FlatAppearance.BorderSize = 0;
+            this.btnStoppen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStoppen.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStoppen.ForeColor = System.Drawing.Color.White;
+            this.btnStoppen.Location = new System.Drawing.Point(180, 558);
+            this.btnStoppen.Margin = new System.Windows.Forms.Padding(0);
+            this.btnStoppen.Name = "btnStoppen";
+            this.tableLayoutPanel1.SetRowSpan(this.btnStoppen, 2);
+            this.btnStoppen.Size = new System.Drawing.Size(270, 124);
+            this.btnStoppen.TabIndex = 6;
+            this.btnStoppen.Text = "[C] Stoppen";
+            this.btnStoppen.UseVisualStyleBackColor = false;
+            this.btnStoppen.Click += new System.EventHandler(this.btnStoppen_Click);
             // 
             // btnGeldOpnemen
             // 
@@ -107,7 +107,7 @@
             this.btnGeldOpnemen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGeldOpnemen.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGeldOpnemen.ForeColor = System.Drawing.Color.White;
-            this.btnGeldOpnemen.Location = new System.Drawing.Point(630, 558);
+            this.btnGeldOpnemen.Location = new System.Drawing.Point(540, 558);
             this.btnGeldOpnemen.Margin = new System.Windows.Forms.Padding(0);
             this.btnGeldOpnemen.Name = "btnGeldOpnemen";
             this.tableLayoutPanel1.SetRowSpan(this.btnGeldOpnemen, 2);
@@ -145,7 +145,7 @@
             this.btnSaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaldo.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaldo.ForeColor = System.Drawing.Color.White;
-            this.btnSaldo.Location = new System.Drawing.Point(630, 372);
+            this.btnSaldo.Location = new System.Drawing.Point(540, 372);
             this.btnSaldo.Margin = new System.Windows.Forms.Padding(0);
             this.btnSaldo.Name = "btnSaldo";
             this.tableLayoutPanel1.SetRowSpan(this.btnSaldo, 2);
@@ -166,6 +166,7 @@
             this.Name = "MainMenu";
             this.Text = "GUI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Shown += new System.EventHandler(this.MainMenu_Shown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -174,7 +175,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnVorigeOfUitloggen;
+        private System.Windows.Forms.Button btnStoppen;
         private System.Windows.Forms.Button btnGeldOpnemen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSaldo;

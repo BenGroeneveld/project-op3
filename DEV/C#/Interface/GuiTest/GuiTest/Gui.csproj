@@ -53,6 +53,7 @@
     <Compile Include="Background.Designer.cs">
       <DependentUpon>Background.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainBackend.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
