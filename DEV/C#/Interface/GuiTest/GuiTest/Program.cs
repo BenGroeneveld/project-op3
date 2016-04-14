@@ -30,6 +30,7 @@ namespace Gui
                 Application.Run(new Pincode());
             }
         }
+
         private static void runProgram()
         {
             Thread backgroundThread = new Thread(runBackground);

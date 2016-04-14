@@ -9,6 +9,7 @@ namespace Gui
         private bool uitloggen = false;
         private bool leaveThisPage = false;
         private bool printBon = true;
+        private string geldOpnemenBedrag = "";
 
         public GeldOpnemen()
         {
@@ -30,14 +31,28 @@ namespace Gui
 
         private void btnPrintBonWel_Click(object sender, EventArgs e)
         {
-            printBon = true;
-            nextPage(printBon);
+            if(isCorrectBedrag(geldOpnemenBedrag))
+            {
+                printBon = true;
+                nextPage(printBon);
+            }
+            else
+            {
+                doGeldOpnemen();
+            }
         }
 
         private void btnPrintBonNiet_Click(object sender, EventArgs e)
         {
-            printBon = false;
-            nextPage(printBon);
+            if(isCorrectBedrag(geldOpnemenBedrag))
+            {
+                printBon = false;
+                nextPage(printBon);
+            }
+            else
+            {
+                doGeldOpnemen();
+            }
         }
 
         private void checkUitloggen()
@@ -88,6 +103,7 @@ namespace Gui
             if(i % veelvoudBedrag != 0)
             {
                 label1.Text = "Incorrect bedrag.\nTyp een veelvoud van €" + veelvoudBedrag + ",00 in.";
+                bedrag.ResetText();
                 return false;
             }
             else
@@ -100,8 +116,14 @@ namespace Gui
         {
             Application.DoEvents();
             label1.Text = "Hoeveel geld wilt u opnemen?\nTyp een veelvoud van €" + veelvoudBedrag + ",00 in.";
+            doGeldOpnemen();
+        }
+
+        private void doGeldOpnemen()
+        {
             while(!leaveThisPage)
             {
+                geldOpnemenBedrag = bedrag.Text;
                 checkButtonPushed();
             }
         }
