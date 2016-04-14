@@ -9,7 +9,6 @@ namespace Gui
         public Welkom()
         {
             InitializeComponent();
-            this.Show();
         }
 
         private void nextPage()

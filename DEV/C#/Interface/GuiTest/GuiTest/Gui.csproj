@@ -53,6 +53,12 @@
     <Compile Include="Background.Designer.cs">
       <DependentUpon>Background.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bedankt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bedankt.Designer.cs">
+      <DependentUpon>Bedankt.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainBackend.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
@@ -88,6 +94,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Background.resx">
       <DependentUpon>Background.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bedankt.resx">
+      <DependentUpon>Bedankt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>

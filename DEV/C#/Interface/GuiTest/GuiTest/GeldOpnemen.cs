@@ -8,10 +8,19 @@ namespace Gui
         private int veelvoudBedrag = 10;
         private bool uitloggen = false;
         private bool leaveThisPage = false;
+        private bool printBon = true;
 
         public GeldOpnemen()
         {
             InitializeComponent();
+        }
+
+        private void nextPage(bool printBon)
+        {
+            var bedankt = new Bedankt(printBon);
+            bedankt.Show();
+            this.Hide();
+            bedankt.Closed += (s, args) => this.Close();
         }
 
         private void btnUitloggen_Click(object sender, EventArgs e)
@@ -21,12 +30,14 @@ namespace Gui
 
         private void btnPrintBonWel_Click(object sender, EventArgs e)
         {
-            // Application.Restart();
+            printBon = true;
+            nextPage(printBon);
         }
 
         private void btnPrintBonNiet_Click(object sender, EventArgs e)
         {
-            // Application.Restart();
+            printBon = false;
+            nextPage(printBon);
         }
 
         private void checkUitloggen()

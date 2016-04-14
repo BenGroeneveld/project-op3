@@ -101,7 +101,7 @@ namespace Gui
             string str = strNumberPushed();
             if(correctie)
             {
-                button1.PerformClick();
+                btnCorrectie.PerformClick();
             }
             else if(uitloggen)
             {
@@ -146,7 +146,7 @@ namespace Gui
 
             if(str.Equals("A"))
             {
-                button1.PerformClick();
+                btnCorrectie.PerformClick();
             }
             else if(str.Equals("C"))
             {
@@ -165,7 +165,7 @@ namespace Gui
                 string str = strNumberPushed();
                 if(correctie)
                 {
-                    button1.PerformClick();
+                    btnCorrectie.PerformClick();
                 }
                 else if(uitloggen)
                 {
@@ -185,7 +185,7 @@ namespace Gui
                 string str = strNumberPushed();
                 if(correctie)
                 {
-                    button1.PerformClick();
+                    btnCorrectie.PerformClick();
                 }
                 else if(uitloggen)
                 {
@@ -205,7 +205,7 @@ namespace Gui
                 string str = strNumberPushed();
                 if(correctie)
                 {
-                    button1.PerformClick();
+                    btnCorrectie.PerformClick();
                 }
                 else if(uitloggen)
                 {
@@ -236,7 +236,7 @@ namespace Gui
             next.Closed += (s, args) => Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCorrectie_Click(object sender, EventArgs e)
         {
             approval = false;
 
@@ -248,7 +248,7 @@ namespace Gui
             string str = strNumberPushed();
             if(correctie)
             {
-                button1.PerformClick();
+                btnCorrectie.PerformClick();
             }
             else if(uitloggen)
             {

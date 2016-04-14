@@ -15,7 +15,7 @@ namespace Gui
             MainBackend.restart();
         }
 
-        private void btnVorige_Click(object sender, EventArgs e)
+        private void btnGeldOpnemen_Click(object sender, EventArgs e)
         {
             var geldOpnemenForm = new GeldOpnemen();
             geldOpnemenForm.Show();

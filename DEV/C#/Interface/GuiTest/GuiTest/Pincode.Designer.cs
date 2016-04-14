@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCorrectie = new System.Windows.Forms.Button();
             this.txtCardID = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -57,7 +57,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.091001F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090091F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel1.Controls.Add(this.button1, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btnCorrectie, 2, 6);
             this.tableLayoutPanel1.Controls.Add(this.txtCardID, 9, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox3, 8, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBox2, 6, 3);
@@ -88,26 +88,26 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1916, 1053);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // button1
+            // btnCorrectie
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.tableLayoutPanel1.SetColumnSpan(this.button1, 3);
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(348, 521);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.tableLayoutPanel1.SetRowSpan(this.button1, 2);
-            this.button1.Size = new System.Drawing.Size(522, 174);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "[A] Corrigeer bedrag";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCorrectie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tableLayoutPanel1.SetColumnSpan(this.btnCorrectie, 3);
+            this.btnCorrectie.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCorrectie.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCorrectie.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCorrectie.FlatAppearance.BorderSize = 0;
+            this.btnCorrectie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCorrectie.Font = new System.Drawing.Font("Open Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCorrectie.ForeColor = System.Drawing.Color.White;
+            this.btnCorrectie.Location = new System.Drawing.Point(348, 521);
+            this.btnCorrectie.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCorrectie.Name = "btnCorrectie";
+            this.tableLayoutPanel1.SetRowSpan(this.btnCorrectie, 2);
+            this.btnCorrectie.Size = new System.Drawing.Size(522, 174);
+            this.btnCorrectie.TabIndex = 21;
+            this.btnCorrectie.Text = "[A] Corrigeer pincode";
+            this.btnCorrectie.UseVisualStyleBackColor = false;
+            this.btnCorrectie.Click += new System.EventHandler(this.btnCorrectie_Click);
             // 
             // txtCardID
             // 
@@ -308,6 +308,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label txtCardID;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCorrectie;
     }
 }
