@@ -13,3 +13,7 @@ D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.ex
 D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.pdb
 D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.Background.resources
 D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\obj\Debug\Gui.Bedankt.resources
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\bin\Debug\MySql.Data.dll
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\bin\Debug\MainBackend.cs
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\bin\Debug\connectionStrings.config
+D:\MEGA\DEV\GitHub\project-op3\DEV\C#\Interface\GuiTest\GuiTest\bin\Debug\App.config

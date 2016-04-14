@@ -38,7 +38,7 @@
             this.inputInloggen = new System.Windows.Forms.TextBox();
             this.btnVolgende = new System.Windows.Forms.Button();
             this.btnUitloggen = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.infoText = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +66,7 @@
             this.tableLayoutPanel1.Controls.Add(this.inputInloggen, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnVolgende, 6, 9);
             this.tableLayoutPanel1.Controls.Add(this.btnUitloggen, 2, 9);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.infoText, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -258,22 +258,21 @@
             this.btnUitloggen.UseVisualStyleBackColor = false;
             this.btnUitloggen.Click += new System.EventHandler(this.btnUitloggen_Click);
             // 
-            // label2
+            // infoText
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tableLayoutPanel1.SetColumnSpan(this.label2, 7);
-            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(348, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.tableLayoutPanel1.SetRowSpan(this.label2, 2);
-            this.label2.Size = new System.Drawing.Size(1218, 174);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Voer uw pincode in";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.infoText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tableLayoutPanel1.SetColumnSpan(this.infoText, 7);
+            this.infoText.Cursor = System.Windows.Forms.Cursors.Default;
+            this.infoText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoText.Font = new System.Drawing.Font("Open Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoText.ForeColor = System.Drawing.Color.White;
+            this.infoText.Location = new System.Drawing.Point(348, 0);
+            this.infoText.Margin = new System.Windows.Forms.Padding(0);
+            this.infoText.Name = "infoText";
+            this.tableLayoutPanel1.SetRowSpan(this.infoText, 2);
+            this.infoText.Size = new System.Drawing.Size(1218, 174);
+            this.infoText.TabIndex = 4;
+            this.infoText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Pincode
             // 
@@ -299,7 +298,7 @@
 
         #endregion
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label infoText;
         private System.Windows.Forms.Button btnUitloggen;
         private System.Windows.Forms.Button btnVolgende;
         private System.Windows.Forms.TextBox inputInloggen;

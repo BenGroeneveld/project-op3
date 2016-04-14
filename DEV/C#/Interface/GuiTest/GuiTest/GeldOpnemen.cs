@@ -99,15 +99,24 @@ namespace Gui
 
         private bool isCorrectBedrag(string str)
         {
-            int i = Convert.ToInt32(str);
+            int i = 100*(Convert.ToInt32(str));
+            int j = Convert.ToInt32(Program.StrBedrag);
             if(i % veelvoudBedrag != 0)
             {
                 label1.Text = "Incorrect bedrag.\nTyp een veelvoud van €" + veelvoudBedrag + ",00 in.";
                 bedrag.ResetText();
                 return false;
             }
+            else if(i > j)
+            {
+                label1.Text = "Saldo niet toereikend.\nTyp een veelvoud van €" + veelvoudBedrag + ",00 in.";
+                bedrag.ResetText();
+                return false;
+            }
             else
             {
+                int nieuwSaldo = j - i;
+                MainBackend.doTransactie(nieuwSaldo, Program.Rfid);
                 return true;
             }
         }

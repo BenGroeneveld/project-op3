@@ -33,7 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGeldOpnemen = new System.Windows.Forms.Button();
             this.btnUitloggen = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.bedrag = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,7 +57,7 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnGeldOpnemen, 6, 9);
             this.tableLayoutPanel1.Controls.Add(this.btnUitloggen, 2, 9);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.bedrag, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.label1, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -153,23 +153,22 @@
             this.btnUitloggen.UseVisualStyleBackColor = false;
             this.btnUitloggen.Click += new System.EventHandler(this.btnUitloggen_Click);
             // 
-            // label2
+            // bedrag
             // 
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.SetColumnSpan(this.label2, 6);
-            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 100F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label2.Location = new System.Drawing.Point(522, 270);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.tableLayoutPanel1.SetRowSpan(this.label2, 2);
-            this.label2.Size = new System.Drawing.Size(1044, 180);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "500\r\n";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bedrag.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel1.SetColumnSpan(this.bedrag, 6);
+            this.bedrag.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bedrag.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bedrag.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.bedrag.Font = new System.Drawing.Font("Open Sans", 100F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bedrag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.bedrag.Location = new System.Drawing.Point(522, 270);
+            this.bedrag.Margin = new System.Windows.Forms.Padding(0);
+            this.bedrag.Name = "bedrag";
+            this.tableLayoutPanel1.SetRowSpan(this.bedrag, 2);
+            this.bedrag.Size = new System.Drawing.Size(1044, 180);
+            this.bedrag.TabIndex = 8;
+            this.bedrag.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
@@ -210,7 +209,7 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label bedrag;
         private System.Windows.Forms.Button btnUitloggen;
         private System.Windows.Forms.Button btnGeldOpnemen;
         private System.Windows.Forms.PictureBox pictureBox1;

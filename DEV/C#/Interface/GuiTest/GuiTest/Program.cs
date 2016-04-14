@@ -6,6 +6,8 @@ namespace Gui
 {
     public static class Program
     {
+        public static string Rfid { get; set; }
+        public static string StrBedrag { get; set; }
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -42,6 +44,5 @@ namespace Gui
         {
             Application.Run(new Background());
         }
-
     }
 }

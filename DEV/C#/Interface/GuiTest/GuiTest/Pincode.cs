@@ -11,6 +11,9 @@ namespace Gui
         private bool uitloggen = false;
         private bool approval = true;
         private bool correctie = false;
+        private int poging = 1;
+        private int actief = 0;
+        private string strVerkeerdWachtwoord = "Verkeerd wachtwoord";
 
         public Pincode()
         {
@@ -30,22 +33,37 @@ namespace Gui
                 {
                     approval = false;
                     clearPincode();
-                    label2.Text = "Verkeerd wachtwoord";
-                    approval = true;
-                    setup();
-
-                    string str = strNumberPushed();
-                    inputInloggen.Text = str;
-                    checkButtonPushed();
+                    infoText.Text = strVerkeerdWachtwoord;
+                    if(poging < 3)
+                    {
+                        infoText.Text += " (" + poging + " / 3)";
+                        poging++;
+                        approval = true;
+                        startPincode();
+                    }
+                    else
+                    {
+                        infoText.Text += " (3 / 3)";
+                        infoText.Text += "\nUw pas is geblokkeerd.";
+                        inputInloggen.Hide();
+                        textBox1.Hide();
+                        textBox2.Hide();
+                        textBox3.Hide();
+                        btnCorrectie.Hide();
+                        btnVolgende.Hide();
+                        MainBackend.blokkeerPas(Program.Rfid);
+                        checkUitloggen();
+                    }
                 }
                 else
                 {
+                    poging = 0;
                     nextPage();
                 }
             }
             catch
             {
-                label2.Text = "Error! [NXTc]";
+                infoText.Text = "Error! [NXTc]";
             }
         }
 
@@ -67,22 +85,8 @@ namespace Gui
 
         private void setCorrectPassword()
         {
-            if(cardID.Equals("ID107"))
-            {
-                correctPassword = 1070;
-            }
-            else if(cardID.Equals("ID182"))
-            {
-                correctPassword = 1820;
-            }
-            else if(cardID.Equals("ID231"))
-            {
-                correctPassword = 2310;
-            }
-            else
-            {
-                label2.Text = "Error! [PW01]";
-            }
+            string strPassword = MainBackend.strDbQuery("Pincode", Program.Rfid);
+            correctPassword = Convert.ToInt32(strPassword);
         }
 
         private void clearPincode()
@@ -97,19 +101,44 @@ namespace Gui
         {
             Application.DoEvents();
             setup();
+            string strToInt = MainBackend.strDbQuery("Actief", Program.Rfid);
+            actief = Convert.ToInt32(strToInt);
+            if(actief == 1)
+            {
+                infoText.Text = "Voer uw pincode in.";
+            }
+            startPincode();
+        }
 
-            string str = strNumberPushed();
-            if(correctie)
+        private void startPincode()
+        {
+            if(actief == 1)
             {
-                btnCorrectie.PerformClick();
+
+                string str = strNumberPushed();
+                if(correctie)
+                {
+                    btnCorrectie.PerformClick();
+                }
+                else if(uitloggen)
+                {
+                    btnUitloggen.PerformClick();
+                }
+                else
+                {
+                    inputInloggen.Text = str;
+                }
             }
-            else if(uitloggen)
+            else if(actief == 0)
             {
-                btnUitloggen.PerformClick();
-            }
-            else
-            {
-                inputInloggen.Text = str;
+                inputInloggen.Hide();
+                textBox1.Hide();
+                textBox2.Hide();
+                textBox3.Hide();
+                btnCorrectie.Hide();
+                btnVolgende.Hide();
+                infoText.Text = "Uw pas is geblokkeerd.";
+                checkUitloggen();
             }
         }
 
@@ -142,19 +171,37 @@ namespace Gui
 
         private void checkButtonPushed()
         {
-            string str = ArduinoInput.strInputText();
+            string str = "";
+            while(!(str.Equals("A") || str.Equals("C") || str.Equals("D")))
+            {
+                str = ArduinoInput.strInputText();
 
-            if(str.Equals("A"))
-            {
-                btnCorrectie.PerformClick();
+                if(str.Equals("A"))
+                {
+                    btnCorrectie.PerformClick();
+                }
+                else if(str.Equals("C"))
+                {
+                    btnUitloggen.PerformClick();
+                }
+                else if(str.Equals("D"))
+                {
+                    btnVolgende.PerformClick();
+                }
             }
-            else if(str.Equals("C"))
+        }
+
+        private void checkUitloggen()
+        {
+            string str = "";
+            while(!str.Equals("C"))
             {
-                btnUitloggen.PerformClick();
-            }
-            else if(str.Equals("D"))
-            {
-                btnVolgende.PerformClick();
+                str = ArduinoInput.strInputText();
+
+                if(str.Equals("C"))
+                {
+                    btnUitloggen.PerformClick();
+                }
             }
         }
 
