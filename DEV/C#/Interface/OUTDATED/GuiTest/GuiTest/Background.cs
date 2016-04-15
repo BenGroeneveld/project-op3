@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GuiTest
+namespace Gui
 {
     public partial class Background : Form
     {
         public Background()
         {
             InitializeComponent();
-        }
-
-        private void Background_Load(object sender, EventArgs e)
-        {
-            new Form2().Show();
         }
     }
 }
