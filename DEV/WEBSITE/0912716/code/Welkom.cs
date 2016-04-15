@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Timers;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
-namespace GuiTest
+namespace Gui
 {
     public partial class Welkom : Form
     {
@@ -19,16 +11,26 @@ namespace GuiTest
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void nextPage()
         {
-
+            Close();
         }
 
-        private void WelkomTimer_Tick(object sender, EventArgs e)
+        private void Welkom_Shown(object sender, EventArgs e)
         {
-            new Pincode().Show();
-            this.Hide();
-            WelkomTimer.Stop();
+            startWelkom();
+        }
+
+        public void startWelkom()
+        {
+            privateStartWelkom();
+        }
+
+        private void privateStartWelkom()
+        {
+            Application.DoEvents();
+            MainBackend.doWelkom();
+            nextPage();
         }
     }
 }

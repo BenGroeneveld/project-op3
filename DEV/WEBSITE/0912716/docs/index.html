@@ -2,7 +2,7 @@
 <html lang="nl-NL">
     <head>
         <base href="http://stud.hr.nl/0912716/" target="_self">
-        <title>De documenten</title>
+        <title>De documenten en het beeldmateriaal</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
@@ -40,8 +40,8 @@
                     <section id="wrapper">
                         <header>
                             <div class="inner">
-                                <h2><span class="icon fa-file-text-o"></span> De documenten</h2>
-                                <p>De documentatie voor dit project</p>
+                                <h2><span class="icon fa-file-text-o"></span> Documenten en beeldmateriaal</h2>
+                                <p>De documentatie en het beeldmateriaal voor dit project</p>
                             </div>
                         </header>
 
@@ -52,6 +52,7 @@
                                     <h3 class="major"><span class="icon fa-file-text-o"></span> De documenten</h3>
                                     <div class="docButton">
                                         <div class="veranderContainer">
+                                            <button value="https://www.youtube.com/embed/2SliUzBROZE" class="button switchContent verander">Video</button>
                                             <button value="docs/samenwerkingscontract.pdf" class="button switchContent verander">Samenwerkingscontract</button>
                                             <button value="docs/productBacklog.pdf" class="button switchContent verander">Product Backlog</button>
                                             <button value="docs/sprintWeek2.pdf" class="button switchContent verander">Sprintplanning Week 2</button>
@@ -140,6 +141,7 @@
                             elements[i].onclick = function()
                             {
                                 document.getElementById("iframe1").src = this.value;
+                                document.getElementById("iframe1").style.display = "block";
                             }
                         }
                     }

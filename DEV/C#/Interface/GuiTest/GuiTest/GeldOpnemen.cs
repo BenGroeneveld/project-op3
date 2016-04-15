@@ -5,7 +5,7 @@ namespace Gui
 {
     public partial class GeldOpnemen : Form
     {
-        private int veelvoudBedrag = 10;
+        private int veelvoudBedrag = 5;
         private bool uitloggen = false;
         private bool leaveThisPage = false;
         private bool printBon = true;
@@ -99,15 +99,15 @@ namespace Gui
 
         private bool isCorrectBedrag(string str)
         {
-            int i = 100*(Convert.ToInt32(str));
-            int j = Convert.ToInt32(Program.StrBedrag);
-            if(i % veelvoudBedrag != 0)
+            int opnemenBedrag = 100*(Convert.ToInt32(str));
+            int huidigSaldo = Convert.ToInt32(Program.StrBedrag);
+            if(opnemenBedrag % (100 * veelvoudBedrag) != 0)
             {
                 label1.Text = "Incorrect bedrag.\nTyp een veelvoud van €" + veelvoudBedrag + ",00 in.";
                 bedrag.ResetText();
                 return false;
             }
-            else if(i > j)
+            else if(opnemenBedrag > huidigSaldo)
             {
                 label1.Text = "Saldo niet toereikend.\nTyp een veelvoud van €" + veelvoudBedrag + ",00 in.";
                 bedrag.ResetText();
@@ -115,7 +115,7 @@ namespace Gui
             }
             else
             {
-                int nieuwSaldo = j - i;
+                int nieuwSaldo = huidigSaldo - opnemenBedrag;
                 MainBackend.doTransactie(nieuwSaldo, Program.Rfid);
                 return true;
             }

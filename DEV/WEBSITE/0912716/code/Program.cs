@@ -1,23 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GuiTest
+namespace Gui
 {
-    static class Program
+    public static class Program
     {
+        public static string Rfid { get; set; }
+        public static string StrBedrag { get; set; }
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Welkom());
+            runProgram();
+        }
+
+        public static void startProgram()
+        {
+            privateStartProgram();
+        }
+
+        private static void privateStartProgram()
+        {
+            while(true)
+            {
+                Application.Run(new Welkom());
+                Application.Run(new Pincode());
+            }
+        }
+
+        private static void runProgram()
+        {
+            Thread backgroundThread = new Thread(runBackground);
+            backgroundThread.Start();
+            startProgram();
+        }
+
+        private static void runBackground()
+        {
+            Application.Run(new Background());
         }
     }
 }

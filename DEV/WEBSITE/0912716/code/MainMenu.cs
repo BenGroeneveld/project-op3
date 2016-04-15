@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GuiTest
+namespace Gui
 {
     public partial class MainMenu : Form
     {
@@ -17,36 +9,53 @@ namespace GuiTest
         {
             InitializeComponent();
         }
-        
-        private void btnUitloggen_Click(object sender, EventArgs e)
-        {
-            new Welkom().Show();
-            Thread.Sleep(10); //GEVAARLIJK!!!!
-            this.Hide();
-        }
 
         private void btnSaldo_Click(object sender, EventArgs e)
         {
-            new Saldo().Show();
-            Thread.Sleep(10); //GEVAARLIJK!!!!
+            var saldoForm = new Saldo();
+            saldoForm.Show();
             this.Hide();
+            saldoForm.Closed += (s, args) => this.Close();
+        }
+
+        private void btnStoppen_Click(object sender, EventArgs e)
+        {
+            MainBackend.restart();
         }
 
         private void btnGeldOpnemen_Click(object sender, EventArgs e)
         {
-            new GeldOpnemen().Show();
-            Thread.Sleep(10); //GEVAARLIJK!!!!
+            var geldOpnemenForm = new GeldOpnemen();
+            geldOpnemenForm.Show();
             this.Hide();
+            geldOpnemenForm.Closed += (s, args) => this.Close();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void checkButtonPushed()
         {
-
+            string str = "";
+            while(str.Equals("") || !(str.Equals("B") || str.Equals("C") || str.Equals("D")))
+            {
+                str = ArduinoInput.strInputText();
+                if(str.Equals("B"))
+                {
+                    btnSaldo.PerformClick();
+                }
+                else if(str.Equals("C"))
+                {
+                    btnStoppen.PerformClick();
+                }
+                else if(str.Equals("D"))
+                {
+                    btnGeldOpnemen.PerformClick();
+                }
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void MainMenu_Shown(object sender, EventArgs e)
         {
-
+            Application.DoEvents();
+            checkButtonPushed();
         }
     }
 }

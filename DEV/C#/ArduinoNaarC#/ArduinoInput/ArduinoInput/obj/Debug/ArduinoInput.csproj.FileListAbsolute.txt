@@ -1,9 +1,0 @@
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\ArduinoInput\ArduinoInput\bin\Debug\ArduinoInput.exe.config
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\ArduinoInput\ArduinoInput\bin\Debug\ArduinoInput.exe
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\ArduinoInput\ArduinoInput\bin\Debug\ArduinoInput.pdb
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\ArduinoInput\ArduinoInput\obj\Debug\ArduinoInput.csprojResolveAssemblyReference.cache
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\ArduinoInput\ArduinoInput\obj\Debug\ArduinoInput.Form1.resources
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\ArduinoInput\ArduinoInput\obj\Debug\ArduinoInput.Properties.Resources.resources
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\ArduinoInput\ArduinoInput\obj\Debug\ArduinoInput.csproj.GenerateResource.Cache
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\ArduinoInput\ArduinoInput\obj\Debug\ArduinoInput.exe
-D:\MEGA\DEV\PROGRAMMING\SCHOOL\CSharp\ArduinoInput\ArduinoInput\obj\Debug\ArduinoInput.pdb
